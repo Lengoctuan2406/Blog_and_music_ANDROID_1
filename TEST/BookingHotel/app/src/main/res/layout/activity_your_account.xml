@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".YourAccount">
+
+    <ImageView
+        android:id="@+id/icon_arrowback_accountFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/icon_back_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--    CHỮ BLOG ĐẦU TRANG-->
+    <TextView
+        android:id="@+id/text_yourInfor_accountFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Your account"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    btn change avatar-->
+
+    <!--  NAME  -->
+
+    <!--    text name customer-->
+    <Button
+        android:id="@+id/btn_changeAvatar"
+        android:layout_width="@dimen/_150dp"
+        android:layout_height="0dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/radius_white_all_ff1a6a77"
+        android:text="Change avatar"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotobold"
+        android:text="Name"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_changeAvatar" />
+
+    <!--  BIRTHDAY  -->
+
+    <!--    text birthday customer-->
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:ems="12"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Your name"
+        android:inputType="text"
+        android:text="Your name"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_name"
+        app:layout_constraintTop_toBottomOf="@+id/btn_changeAvatar" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/txtBirthday"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="55dp"-->
+    <!--        android:layout_marginTop="25dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        android:ems="12"-->
+    <!--        android:fontFamily="@font/robotoregular"-->
+    <!--        android:hint="Birthday"-->
+    <!--        android:inputType="text"-->
+    <!--        android:text="01/02/1999"-->
+    <!--        android:textSize="18dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.87"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/textView_birthday"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/txtName" />-->
+
+    <TextView
+        android:id="@+id/textView_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotobold"
+        android:text="Birthday"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+    <!-- EMAIL -->
+    <!--    text email customer-->
+
+    <Spinner
+        android:id="@+id/txtBirthday"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Birthday"
+        android:inputType="text"
+        android:spinnerMode="dialog"
+        android:text="01/02/1999"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_birthday"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/textView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/robotobold"
+        android:text="Email"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_birthday" />
+
+    <!--    text gender customer-->
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="12"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Email"
+        android:inputType="text"
+        android:text="teamBooking@gmail.com"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toEndOf="@+id/textView_email"
+        app:layout_constraintTop_toBottomOf="@+id/txtBirthday" />
+
+    <TextView
+        android:id="@+id/textView_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotobold"
+        android:text="Gender"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_email" />
+
+    <!--    Checkbox male-->
+
+    <!--    Checkbox female-->
+    <RadioButton
+        android:id="@+id/checkbox_gender_male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:text="Male"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/textView_gender"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <!--    PHONE-->
+
+    <RadioButton
+        android:id="@+id/checkbox_gender_female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="Female"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/checkbox_gender_male"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <!--    TEXT PHONE-->
+    <TextView
+        android:id="@+id/textView_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/robotobold"
+        android:text="Phone"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_gender" />
+
+    <!--    BTN SAVE-->
+
+    <EditText
+        android:id="@+id/txtPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="12"
+        android:fontFamily="@font/robotoregular"
+        android:hint="Email"
+        android:inputType="number"
+        android:text="0371231201"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_phone"
+        app:layout_constraintTop_toBottomOf="@+id/checkbox_gender_male" />
+
+    <Button
+        android:id="@+id/btn_saveChangeInfor_accountFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/radius_white_all_ff138711"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_phone" />
+
+    <Button
+        android:id="@+id/btn_cancelChangeinfor_accountFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/radius_white_all_ff771a1a"
+        android:text="Cancel"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_saveChangeInfor_accountFragment"
+        app:layout_constraintTop_toBottomOf="@+id/textView_phone" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
