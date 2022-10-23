@@ -1,4 +1,4 @@
-package com.example.bookinghotel;
+package com.example.bookinghotel.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +10,15 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bookinghotel.R;
+
 import java.util.List;
 
-public class Adapterblog extends RecyclerView.Adapter<Adapterblog.ListBlog> {
+public class AdapterBlog extends RecyclerView.Adapter<AdapterBlog.ListBlog> {
 
     private List<blog> blogModel;
 
-    public Adapterblog(List<blog> blogModel) {
+    public AdapterBlog(List<blog> blogModel) {
         this.blogModel = blogModel;
     }
 

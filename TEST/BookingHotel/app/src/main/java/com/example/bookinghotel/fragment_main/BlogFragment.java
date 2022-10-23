@@ -1,4 +1,4 @@
-package com.example.bookinghotel;
+package com.example.bookinghotel.fragment_main;
 
 import android.os.Bundle;
 
@@ -13,6 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+
+import com.example.bookinghotel.adapter.AdapterBlog;
+import com.example.bookinghotel.R;
+import com.example.bookinghotel.adapter.blog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +34,7 @@ public class BlogFragment extends Fragment {
         RecyclerView.LayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 2);
         recyclerView_listBlog.setLayoutManager(gridLayoutManager);
 
-        Adapterblog adapter_list_blog = new Adapterblog( getListBlog());
+        AdapterBlog adapter_list_blog = new AdapterBlog( getListBlog());
         recyclerView_listBlog.setAdapter(adapter_list_blog);
 
 //        linearLayout_adapter_list_blog = (LinearLayout) view.findViewById(R.id.linearLayout_adapter_list_blog);

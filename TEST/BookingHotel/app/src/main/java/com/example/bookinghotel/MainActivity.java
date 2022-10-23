@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.bookinghotel.fragment_main.AccountFragment;
+import com.example.bookinghotel.fragment_main.BlogFragment;
+import com.example.bookinghotel.fragment_main.HomeFragment;
+import com.example.bookinghotel.fragment_main.SavedFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

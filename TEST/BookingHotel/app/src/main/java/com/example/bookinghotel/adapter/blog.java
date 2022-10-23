@@ -1,4 +1,4 @@
-package com.example.bookinghotel;
+package com.example.bookinghotel.adapter;
 
 public class blog {
     private int imgBlog;
