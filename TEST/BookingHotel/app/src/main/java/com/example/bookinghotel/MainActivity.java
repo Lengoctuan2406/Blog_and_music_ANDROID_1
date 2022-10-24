@@ -2,6 +2,7 @@ package com.example.bookinghotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.menu_icon_home:
+
                         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
                         return true;
                     case R.id.menu_icon_saved:
