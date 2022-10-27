@@ -39,4 +39,5 @@
             android:text="Address"
             android:textSize="16sp"/>
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

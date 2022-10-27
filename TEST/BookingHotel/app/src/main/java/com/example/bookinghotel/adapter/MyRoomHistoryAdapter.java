@@ -22,7 +22,7 @@ public class MyRoomHistoryAdapter extends FragmentStateAdapter {
                 return new DoingFragment();
             case 1:
                 return new DoneFragment();
-            case 3:
+            case 2:
                 return new CancelFragment();
             default:
                 return new DoingFragment();
