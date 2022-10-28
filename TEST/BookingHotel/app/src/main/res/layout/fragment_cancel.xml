@@ -9,11 +9,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_cancel"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginEnd="@dimen/_24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

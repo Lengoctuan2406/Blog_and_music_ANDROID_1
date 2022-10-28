@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/ImageRadius"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_80dp"
         android:background="@color/FF0B2B30"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         android:fontFamily="@font/encodesanssemicondensedmedium"
         android:text="See pictures"
         android:textColor="@color/FFF9F9F9"
-        android:textSize="24sp"
+        android:textSize="@dimen/_text_24sp"
         app:layout_constraintBottom_toBottomOf="@+id/ImageRadius"
         app:layout_constraintEnd_toEndOf="@+id/ImageRadius"
         app:layout_constraintStart_toStartOf="@+id/ImageRadius"
@@ -33,9 +33,9 @@
     <!--ICON BACK (QUAY LẠI) TRÊN NỀN HÌNH BANNER BO TRÒN XANH (ImageRadius)-->
     <ImageView
         android:id="@+id/ImageIconBack"
-        android:layout_width="15dp"
-        android:layout_height="24dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="@dimen/_15dp"
+        android:layout_height="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_4dp"
         app:layout_constraintBottom_toBottomOf="@+id/TitlePolicies"
         app:layout_constraintEnd_toStartOf="@+id/TitlePolicies"
         app:layout_constraintHorizontal_bias="0.301"
@@ -44,8 +44,8 @@
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
         android:layout_marginTop="@dimen/_80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,32 +62,31 @@
             <ImageView
                 android:id="@+id/imageView2a"
                 android:layout_width="match_parent"
-                android:layout_height="193dp"
+                android:layout_height="@dimen/_200dp"
                 android:layout_marginTop="@dimen/_16dp"
                 app:srcCompat="@drawable/hotelroom1" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
-                android:layout_height="193dp"
+                android:layout_height="@dimen/_200dp"
                 android:layout_marginTop="@dimen/_16dp"
                 app:srcCompat="@drawable/hotelroom2" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="193dp"
+                android:layout_height="@dimen/_200dp"
                 android:layout_marginTop="@dimen/_16dp"
                 app:srcCompat="@drawable/hotelroom3" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="193dp"
+                android:layout_height="@dimen/_200dp"
                 android:layout_marginTop="@dimen/_16dp"
                 app:srcCompat="@drawable/hotelroom3" />
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

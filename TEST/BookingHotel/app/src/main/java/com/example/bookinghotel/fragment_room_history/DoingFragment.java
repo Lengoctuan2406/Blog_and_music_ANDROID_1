@@ -32,17 +32,15 @@ public class DoingFragment extends Fragment {
 
         AdapterRoomHistoryDoing adapterRoomHistory_doing = new AdapterRoomHistoryDoing(getListRoom_Doing());
         recyclerView_doing.setAdapter(adapterRoomHistory_doing);
-//        AdapterBlog adapter_list_blog = new AdapterBlog(getListRoom_Doing());
-//        recyclerView_doing.setAdapter(adapter_list_blog);
     }
 
     private List<room_history> getListRoom_Doing() {
         List<room_history> room_histories = new ArrayList<>();
 
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 25, 1, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel ne", 30, 1, "2N - 1D", "Single beds", "Hoi An"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 14, 1, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 15, 1, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom2, "BONITA GRAND HOTEL", 25, 1, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom1, "A IN RIVERSIDE HOTEL", 30, 1, "2N - 1D", "Single beds", "Hoi An"));
+        room_histories.add(new room_history(R.drawable.hotelroom3, "BONITA SIGNATURE HOTEL", 14, 1, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom1, "BONITA HÙNG VƯƠNG", 15, 1, "2N - 1D", "Single beds", "Da Nang"));
 
         return room_histories;
 

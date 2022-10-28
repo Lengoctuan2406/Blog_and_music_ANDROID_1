@@ -2,10 +2,13 @@ package com.example.bookinghotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
@@ -15,11 +18,30 @@ import java.util.List;
 
 public class DetailRoom extends AppCompatActivity {
     ViewFlipper viewFlipper;
+    TextView textView30;
+    ImageView imageView14;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_room);
+        textView30 = findViewById(R.id.textView30);
+        textView30.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DetailRoom.this, Policies.class);
+                startActivity(i);
+            }
+        });
+
+        imageView14 = findViewById(R.id.imageView14);
+        imageView14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DetailRoom.this, SeePictures.class);
+                startActivity(i);
+            }
+        });
 
         Anhxa();
         ActionViewFlipper();

@@ -22,6 +22,7 @@ import java.util.List;
 public class DoneFragment extends Fragment {
 
     RecyclerView recyclerView_done;
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -32,17 +33,15 @@ public class DoneFragment extends Fragment {
 
         AdapterRoomHistoryDone adapterRoomHistory_done = new AdapterRoomHistoryDone(getListRoom_Done());
         recyclerView_done.setAdapter(adapterRoomHistory_done);
-//        AdapterBlog adapter_list_blog = new AdapterBlog(getListRoom_Doing());
-//        recyclerView_doing.setAdapter(adapter_list_blog);
     }
 
     private List<room_history> getListRoom_Done() {
         List<room_history> room_histories = new ArrayList<>();
 
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel done", 25, 0, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel ne", 30, 0, "2N - 1D", "Single beds", "Hoi An"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 14, 0, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 15, 0, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom2, "CLOUD 9 HOTEL ĐƯỜNG 21", 25, 0, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom3, "LÁ HOTEL PHÚ NHUẬN", 30, 0, "2N - 1D", "Single beds", "Hoi An"));
+        room_histories.add(new room_history(R.drawable.hotelroom1, "Z HOTEL", 14, 0, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom2, "LÁ RIVERSIDE THANH ĐA", 15, 0, "2N - 1D", "Single beds", "Da Nang"));
 
         return room_histories;
 

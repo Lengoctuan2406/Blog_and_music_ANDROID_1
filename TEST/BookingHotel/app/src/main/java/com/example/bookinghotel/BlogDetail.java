@@ -2,7 +2,9 @@ package com.example.bookinghotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,12 +27,23 @@ public class BlogDetail extends AppCompatActivity {
 //                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
 //                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...");
 TextView body_des_blog,nameBlog, addressBlog;
-    ImageView imgBlog;
+    ImageView imgBlog, icon_arrowback_blogFragment;
     blog blog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_detail);
+
+        icon_arrowback_blogFragment = findViewById(R.id.icon_arrowback_blogFragment);
+        icon_arrowback_blogFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(BlogDetail.this, MainActivity.class);
+                i.putExtra("fragment", 3);
+                startActivity(i);
+            }
+        });
+
 
         body_des_blog = findViewById(R.id.body_des_blog);
         nameBlog = findViewById(R.id.name_des_blog);

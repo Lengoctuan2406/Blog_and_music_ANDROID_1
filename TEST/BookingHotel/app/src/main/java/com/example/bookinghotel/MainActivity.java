@@ -26,29 +26,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         bottomNavigationView = findViewById(R.id.bottom_nav);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
-
+        Intent intent = getIntent();
+        int fragment = intent.getIntExtra("fragment", 0);
+        if(fragment == 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
+            bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        } else if (fragment == 2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, savedFragment).commit();
+            bottomNavigationView.getMenu().getItem(1).setChecked(true);
+        } else if (fragment == 3){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, blogFragment).commit();
+            bottomNavigationView.getMenu().getItem(2).setChecked(true);
+        } else if (fragment == 4){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, accountFragment).commit();
+            bottomNavigationView.getMenu().getItem(3).setChecked(true);
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
+            bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        }
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.menu_icon_home:
-
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
-                        return true;
-                    case R.id.menu_icon_saved:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, savedFragment).commit();
-                        return true;
-                    case R.id.menu_icon_blog:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, blogFragment).commit();
-                        return true;
-                    case R.id.menu_icon_account:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, accountFragment).commit();
-                        return true;
+                if(item.getItemId() == R.id.menu_icon_home){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
+                    return true;
+                } else if (item.getItemId() == R.id.menu_icon_saved){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, savedFragment).commit();
+                    return true;
+                } else if (item.getItemId() == R.id.menu_icon_blog){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, blogFragment).commit();
+                    return true;
+                } else if (item.getItemId() == R.id.menu_icon_account){
+                    getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, accountFragment).commit();
+                    return true;
+                } else {
+                    return false;
                 }
-                return false;
             }
         });
     }

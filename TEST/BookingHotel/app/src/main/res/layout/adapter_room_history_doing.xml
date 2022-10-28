@@ -2,15 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/adapterLayout_roomHistory"
-    android:elevation="8dp"
+    android:elevation="@dimen/_8dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="15dp">
+    android:layout_marginTop="@dimen/_15dp"
+    android:layout_marginBottom="@dimen/_15dp">
     <!--LinearLayout tong-->
     <LinearLayout
         android:id="@+id/linearLayout_adapter_roomHistory"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +28,8 @@
             <!--Image hotel-->
             <ImageView
                 android:id="@+id/img_roomHistory"
-                android:layout_width="190dp"
-                android:layout_height="289dp"
+                android:layout_width="@dimen/_190dp"
+                android:layout_height="@dimen/_300dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_blog_1" />
 
@@ -38,8 +38,8 @@
                 android:id="@+id/linearLayout_adapter_InforoomHistory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_15dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -48,10 +48,10 @@
                     android:id="@+id/NameroomHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="@dimen/_10dp"
                     android:fontFamily="@font/robotobold"
                     android:text="Name's blog"
-                    android:textSize="20dp"
+                    android:textSize="@dimen/_20dp"
                     android:textStyle="bold" />
 
                 <!--            Gia phong-->
@@ -65,22 +65,22 @@
                         android:id="@+id/PiceroomHistory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotobold"
                         android:text="Price: $ "
                         android:textColor="@color/FF1A6A77"
-                        android:textSize="18dp" />
+                        android:textSize="@dimen/_18dp" />
 
                     <!--                Gia phong-->
                     <TextView
                         android:id="@+id/txt_PiceroomHistory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotobold"
                         android:text="Ha Noi"
                         android:textColor="@color/FF1A6A77"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_16dp" />
                 </LinearLayout>
 
                 <!--            LinearLayout so ngay dem-->
@@ -91,10 +91,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
                     android:text="1N - 2D"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:textColor="@color/FF645C5C"
-                    android:textSize="18dp" />
-
+                    android:textSize="@dimen/_18dp" />
 
                 <!--            LinearLayout cua so phong va loai phong-->
                 <TextView
@@ -103,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotoregular"
                     android:text="Double beds"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:textColor="@color/FF645C5C" />
                 <!--            LinearLayout dia chi-->
                 <LinearLayout
@@ -117,31 +116,31 @@
                         android:id="@+id/AddressroomHistory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotoregular"
                         android:text="Address: "
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_16dp" />
                     <!--                Dia chi-->
                     <TextView
                         android:id="@+id/txt_AddressroomHistory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotoregular"
                         android:text="Ha Noi"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_16dp" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btn_cancel_roomHistory"
-                    android:layout_width="78dp"
-                    android:layout_height="40dp"
+                    android:layout_width="@dimen/_80dp"
+                    android:layout_height="@dimen/_40dp"
                     android:layout_gravity="right"
                     android:layout_marginTop="@dimen/_50dp"
                     android:backgroundTint="@color/FF771A1A"
                     android:text="Cancel"
-                    android:textSize="10dp"
-                    app:cornerRadius="10dp"
+                    android:textSize="@dimen/_10dp"
+                    app:cornerRadius="@dimen/_10dp"
                     android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>

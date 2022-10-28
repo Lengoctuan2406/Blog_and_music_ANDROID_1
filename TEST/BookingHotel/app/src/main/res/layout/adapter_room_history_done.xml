@@ -2,16 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/adapterLayout_roomHistory"
-    android:elevation="8dp"
+    android:elevation="@dimen/_8dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="15dp">
+    android:layout_marginTop="@dimen/_15dp"
+    android:layout_marginBottom="@dimen/_15dp">
 
     <!--LinearLayout tong-->
     <LinearLayout
         android:id="@+id/linearLayout_adapter_roomHistory_done"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,8 +29,8 @@
             <!--Image hotel-->
             <ImageView
                 android:id="@+id/img_roomHistory_done"
-                android:layout_width="190dp"
-                android:layout_height="289dp"
+                android:layout_width="@dimen/_190dp"
+                android:layout_height="@dimen/_300dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_blog_1" />
 
@@ -39,8 +39,8 @@
                 android:id="@+id/linearLayout_adapter_InforoomHistory_done"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_15dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -52,7 +52,7 @@
                     android:layout_marginBottom="10dp"
                     android:fontFamily="@font/robotobold"
                     android:text="Name's blog"
-                    android:textSize="20dp"
+                    android:textSize="@dimen/_20dp"
                     android:textStyle="bold" />
 
                 <!--            Gia phong-->
@@ -70,7 +70,7 @@
                         android:fontFamily="@font/robotobold"
                         android:text="Price: $ "
                         android:textColor="@color/FF1A6A77"
-                        android:textSize="18dp" />
+                        android:textSize="@dimen/_18dp" />
 
                     <!--                Gia phong-->
                     <TextView
@@ -81,7 +81,7 @@
                         android:fontFamily="@font/robotobold"
                         android:text="Ha Noi"
                         android:textColor="@color/FF1A6A77"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_16dp" />
                 </LinearLayout>
 
                 <!--            LinearLayout so ngay dem-->
@@ -92,9 +92,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
                     android:text="1N - 2D"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:textColor="@color/FF645C5C"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/_18dp" />
 
 
                 <!--            LinearLayout cua so phong va loai phong-->
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotoregular"
                     android:text="Double beds"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:textColor="@color/FF645C5C" />
                 <!--            LinearLayout dia chi-->
                 <LinearLayout
@@ -118,19 +118,19 @@
                         android:id="@+id/AddressroomHistory_done"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotoregular"
                         android:text="Address: "
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_16dp" />
                     <!--                Dia chi-->
                     <TextView
                         android:id="@+id/txt_AddressroomHistory_done"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotoregular"
                         android:text="Ha Noi"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/_16dp" />
 
                 </LinearLayout>
 

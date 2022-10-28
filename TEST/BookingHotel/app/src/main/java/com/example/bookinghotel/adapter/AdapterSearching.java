@@ -1,5 +1,6 @@
 package com.example.bookinghotel.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bookinghotel.BlogDetail;
+import com.example.bookinghotel.DetailRoom;
 import com.example.bookinghotel.R;
 
 import java.util.List;
@@ -42,6 +45,13 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
         holder.priceRoom.setText(String.valueOf(room_history_1.getPriceRoomHistory()));
         holder.stayDate.setText(room_history_1.getStayDate());
         holder.typeRoom.setText(room_history_1.getTypeRoomHistory());
+        holder.adapterLayout_list_resultHotel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), DetailRoom.class);
+                v.getContext().startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -55,6 +65,7 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
     public class ListSearch extends RecyclerView.ViewHolder {
         private ImageView img_roomSaved;
         private TextView priceRoom, nameHotel, typeRoom, stayDate;
+        private CardView adapterLayout_list_resultHotel;
 
         public ListSearch(@NonNull View itemView) {
             super(itemView);
@@ -64,7 +75,7 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
             priceRoom = itemView.findViewById(R.id.price_list_resultHotel);
             typeRoom = itemView.findViewById(R.id.typeRoom_list_resultHotel);
             stayDate = itemView.findViewById(R.id.stay_list_resultHotel);
-
+            adapterLayout_list_resultHotel = itemView.findViewById(R.id.adapterLayout_list_resultHotel);
         }
     }
 }

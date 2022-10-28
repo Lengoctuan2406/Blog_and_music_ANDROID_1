@@ -40,10 +40,10 @@ public class CancelFragment extends Fragment {
     private List<room_history> getListRoom_Cancel() {
         List<room_history> room_histories = new ArrayList<>();
 
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel cancel", 25, 0, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel ne", 30, 0, "2N - 1D", "Single beds", "Hoi An"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 14, 0, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new room_history(R.drawable.image_customer_test,"Name hotel", 15, 0, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom1,"GO2JOY - WHITE LION ROOM", 179, 0, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom2,"GO2JOY - MILAN 1 ROOM", 30, 0, "2N - 1D", "Single beds", "Hoi An"));
+        room_histories.add(new room_history(R.drawable.hotelroom3,"GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 0, "2N - 1D", "Single beds", "Da Nang"));
+        room_histories.add(new room_history(R.drawable.hotelroom1,"GO2JOY - BẠN TÔI ROOM", 15, 0, "2N - 1D", "Single beds", "Da Nang"));
 
         return room_histories;
 

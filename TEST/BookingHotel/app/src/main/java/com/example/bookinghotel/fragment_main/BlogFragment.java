@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.bookinghotel.adapter.AdapterBlog;
@@ -36,21 +37,15 @@ public class BlogFragment extends Fragment {
 
         AdapterBlog adapter_list_blog = new AdapterBlog( getListBlog());
         recyclerView_listBlog.setAdapter(adapter_list_blog);
-
-//        linearLayout_adapter_list_blog = (LinearLayout) view.findViewById(R.id.linearLayout_adapter_list_blog);
-////        img_list_blog = (ImageView) view.findViewById(R.id.img_list_blog);
-//        adapterLayout_list_blog = (CardView)view.findViewById(R.id.adapterLayout_list_blog);
-
     }
 
     private List<blog> getListBlog() {
         List<blog> blog_models = new ArrayList<>();
 
-        blog_models.add(new blog(R.drawable.image_customer_test, "Name blog", "Address","Test Des Blog"));
-        blog_models.add(new blog(R.drawable.image_customer_test, "Name ne", "Address",null));
-        blog_models.add(new blog(R.drawable.image_customer_test, "Name blog", "Address",null));
-        blog_models.add(new blog(R.drawable.image_customer_test, "Name blog", "Address",null));
-
+        blog_models.add(new blog(R.drawable.blog1, "Nadine Phu Quoc Resort", "Address","Night Sea Hotel cái tên đứng đầu trong danh sách những khách sạn có chỗ đậu xe hơi ở Phú Quốc mà Go2Joy muốn bật mí đến bạn đọc. Với không gian sang trọng, hiện đại Night Sea Hotel đã khiến cho không ít du khách phải say mê khi lần đầu đến đây nghỉ dưỡng.Toàn bộ phòng khách sạn của Night Sea Hotel được thiết kế theo phong cách hiện đại, được tranh bị đầy đủ tiện nghi. Mỗi phòng đều có góc view đẹp, tạo cảm giác thoải mái, dễ chịu và thư giãn khi nghỉ ngơi. Ngoài ra, Night Sea Hotel còn hỗ trợ bãi đậu xe rộng rãi, giúp du khách dễ dàng đậu đỗ xe mà không phải mất phí đậu xe khi đi du lịch tại Phú Quốc.Nadine Phu Quoc Resort là một trong số những resort hàng đầu tại Phú Quốc. Nổi bật và gây ấn tượng với du khách với không gian phòng nghỉ theo thiết kế hiện đại, sang trọng, đầy đủ tiện nghi, giúp cho chuyến du lịch của bạn thêm phần hoàn hảo."));
+        blog_models.add(new blog(R.drawable.blog2, "Night Sea Hotel", "Address","Night Sea Hotel cái tên đứng đầu trong danh sách những khách sạn có chỗ đậu xe hơi ở Phú Quốc mà Go2Joy muốn bật mí đến bạn đọc. Với không gian sang trọng, hiện đại Night Sea Hotel đã khiến cho không ít du khách phải say mê khi lần đầu đến đây nghỉ dưỡng.Toàn bộ phòng khách sạn của Night Sea Hotel được thiết kế theo phong cách hiện đại, được tranh bị đầy đủ tiện nghi. Mỗi phòng đều có góc view đẹp, tạo cảm giác thoải mái, dễ chịu và thư giãn khi nghỉ ngơi. Ngoài ra, Night Sea Hotel còn hỗ trợ bãi đậu xe rộng rãi, giúp du khách dễ dàng đậu đỗ xe mà không phải mất phí đậu xe khi đi du lịch tại Phú Quốc.Nadine Phu Quoc Resort là một trong số những resort hàng đầu tại Phú Quốc. Nổi bật và gây ấn tượng với du khách với không gian phòng nghỉ theo thiết kế hiện đại, sang trọng, đầy đủ tiện nghi, giúp cho chuyến du lịch của bạn thêm phần hoàn hảo."));
+        blog_models.add(new blog(R.drawable.blog3, "Paralia Hotel", "Address","Night Sea Hotel cái tên đứng đầu trong danh sách những khách sạn có chỗ đậu xe hơi ở Phú Quốc mà Go2Joy muốn bật mí đến bạn đọc. Với không gian sang trọng, hiện đại Night Sea Hotel đã khiến cho không ít du khách phải say mê khi lần đầu đến đây nghỉ dưỡng.Toàn bộ phòng khách sạn của Night Sea Hotel được thiết kế theo phong cách hiện đại, được tranh bị đầy đủ tiện nghi. Mỗi phòng đều có góc view đẹp, tạo cảm giác thoải mái, dễ chịu và thư giãn khi nghỉ ngơi. Ngoài ra, Night Sea Hotel còn hỗ trợ bãi đậu xe rộng rãi, giúp du khách dễ dàng đậu đỗ xe mà không phải mất phí đậu xe khi đi du lịch tại Phú Quốc.Nadine Phu Quoc Resort là một trong số những resort hàng đầu tại Phú Quốc. Nổi bật và gây ấn tượng với du khách với không gian phòng nghỉ theo thiết kế hiện đại, sang trọng, đầy đủ tiện nghi, giúp cho chuyến du lịch của bạn thêm phần hoàn hảo."));
+        blog_models.add(new blog(R.drawable.blog4, "The Hill Resort", "Address","Night Sea Hotel cái tên đứng đầu trong danh sách những khách sạn có chỗ đậu xe hơi ở Phú Quốc mà Go2Joy muốn bật mí đến bạn đọc. Với không gian sang trọng, hiện đại Night Sea Hotel đã khiến cho không ít du khách phải say mê khi lần đầu đến đây nghỉ dưỡng.Toàn bộ phòng khách sạn của Night Sea Hotel được thiết kế theo phong cách hiện đại, được tranh bị đầy đủ tiện nghi. Mỗi phòng đều có góc view đẹp, tạo cảm giác thoải mái, dễ chịu và thư giãn khi nghỉ ngơi. Ngoài ra, Night Sea Hotel còn hỗ trợ bãi đậu xe rộng rãi, giúp du khách dễ dàng đậu đỗ xe mà không phải mất phí đậu xe khi đi du lịch tại Phú Quốc.Nadine Phu Quoc Resort là một trong số những resort hàng đầu tại Phú Quốc. Nổi bật và gây ấn tượng với du khách với không gian phòng nghỉ theo thiết kế hiện đại, sang trọng, đầy đủ tiện nghi, giúp cho chuyến du lịch của bạn thêm phần hoàn hảo."));
 
         return blog_models;
     }
