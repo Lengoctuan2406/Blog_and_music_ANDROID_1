@@ -58,12 +58,8 @@
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager_roomHistory"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_below="@id/tablayout_roomHistory"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout_roomHistory" />
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tablayout_roomHistory"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
