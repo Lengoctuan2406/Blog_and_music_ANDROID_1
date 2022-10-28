@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adapterLayout_roomHistory"
+    android:elevation="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="20dp">
-
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp">
     <!--LinearLayout tong-->
     <LinearLayout
         android:id="@+id/linearLayout_adapter_roomHistory"
@@ -67,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/robotobold"
-                        android:text="Price: $"
+                        android:text="Price: $ "
                         android:textColor="@color/FF1A6A77"
                         android:textSize="18dp" />
 
@@ -78,90 +78,33 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/robotobold"
-                        android:text="25"
+                        android:text="Ha Noi"
                         android:textColor="@color/FF1A6A77"
-                        android:textSize="18dp" />
+                        android:textSize="16dp" />
                 </LinearLayout>
 
                 <!--            LinearLayout so ngay dem-->
-                <LinearLayout
-                    android:id="@+id/linearLayout_adapter_DNroomHistory"
+                <!--So dem-->
+                <TextView
+                    android:id="@+id/txt_StayRoomHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-                    <!--                So ngay -->
-                    <TextView
-                        android:id="@+id/txt_DayNoroomHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotobold"
-                        android:text="2"
-                        android:textColor="@color/FF645C5C"
-                        android:textSize="18dp" />
-                    <!-- Dau - -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotobold"
-                        android:text="N - "
-                        android:textColor="@color/FF645C5C"
-                        android:textSize="18dp" />
-                    <!--So dem-->
-                    <TextView
-                        android:id="@+id/txt_NightNoroomHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotobold"
-                        android:text="1"
-                        android:textColor="@color/FF645C5C"
-                        android:textSize="18dp" />
+                    android:fontFamily="@font/robotobold"
+                    android:text="1N - 2D"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/FF645C5C"
+                    android:textSize="18dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotobold"
-                        android:text="D"
-                        android:textColor="@color/FF645C5C"
-                        android:textSize="18dp" />
-
-                </LinearLayout>
 
                 <!--            LinearLayout cua so phong va loai phong-->
-                <LinearLayout
-                    android:id="@+id/linearLayout_adapter_NoroomHistory"
+                <TextView
+                    android:id="@+id/txt_TyperoomHistory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
-                    <!--                So phong-->
-                    <TextView
-                        android:id="@+id/txt_NoroomHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotoregular"
-                        android:text="1"
-                        android:textColor="@color/FF645C5C" />
-
-                    <!--                Dau - -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotobold"
-                        android:text="Room - "
-                        android:textColor="@color/FF645C5C" />
-
-                    <!--                Loai phong-->
-                    <TextView
-                        android:id="@+id/txt_TyperoomHistory"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotoregular"
-                        android:text="Double beds"
-                        android:textColor="@color/FF645C5C" />
-                </LinearLayout>
-
+                    android:fontFamily="@font/robotoregular"
+                    android:text="Double beds"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/FF645C5C" />
                 <!--            LinearLayout dia chi-->
                 <LinearLayout
                     android:id="@+id/linearLayout_adapter_AddressroomHistory"

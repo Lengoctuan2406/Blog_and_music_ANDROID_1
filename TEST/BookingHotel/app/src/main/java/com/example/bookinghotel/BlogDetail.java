@@ -3,23 +3,45 @@ package com.example.bookinghotel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BlogDetail extends AppCompatActivity {
+import com.example.bookinghotel.adapter.blog;
 
-    TextView body_des_blog;
+public class BlogDetail extends AppCompatActivity {
+//
+//    TextView body_des_blog;
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_blog_detail);
+//
+//        body_des_blog = findViewById(R.id.body_des_blog);
+//        body_des_blog.setText("This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An" +
+//                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\n" +
+//                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...");
+TextView body_des_blog,nameBlog, addressBlog;
+    ImageView imgBlog;
+    blog blog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_detail);
 
         body_des_blog = findViewById(R.id.body_des_blog);
-        body_des_blog.setText("This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An" +
-                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\n" +
-                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...");
+        nameBlog = findViewById(R.id.name_des_blog);
+        addressBlog = findViewById(R.id.address_des_blog);
+        imgBlog = findViewById(R.id.img_des_blog);
+
+        nameBlog.setText(getIntent().getExtras().getString("name"));
+        addressBlog.setText(getIntent().getExtras().getString("address"));
+        body_des_blog.setText(getIntent().getExtras().getString("des"));
+        int imgDes = getIntent().getIntExtra("img", 0);
+        imgBlog.setImageResource(imgDes);
     }
+
 }
