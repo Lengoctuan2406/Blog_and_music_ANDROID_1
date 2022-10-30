@@ -20,7 +20,7 @@ import java.util.List;
 public class DetailRoom extends AppCompatActivity {
     ViewFlipper viewFlipper;
     TextView textView30;
-    ImageView imageView14;
+    ImageView imageView14, imageView20;
     Button button4;
 
     @Override
@@ -32,6 +32,14 @@ public class DetailRoom extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, Policies.class);
+                startActivity(i);
+            }
+        });
+        imageView20 = findViewById(R.id.imageView20);
+        imageView20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DetailRoom.this, Review.class);
                 startActivity(i);
             }
         });
