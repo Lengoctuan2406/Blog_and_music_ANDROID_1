@@ -52,8 +52,9 @@ public class Searching extends AppCompatActivity {
         search_models.add(new room_history(R.drawable.hotelroom1,"GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Single beds", "Da Nang"));
         search_models.add(new room_history(R.drawable.hotelroom2,"GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Single beds", "Hoi An"));
         search_models.add(new room_history(R.drawable.hotelroom3,"GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Single beds", "Da Nang"));
-        search_models.add(new room_history(R.drawable.image_customer_test,"GO2JOY - BẠN TÔI ROOM", 15, 1, "2N - 1D", "Single beds", "Da Nang"));
-
+        search_models.add(new room_history(R.drawable.hotelroom1,"GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Single beds", "Da Nang"));
+        search_models.add(new room_history(R.drawable.hotelroom2,"GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Single beds", "Hoi An"));
+        search_models.add(new room_history(R.drawable.hotelroom3,"GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Single beds", "Da Nang"));
 
         return search_models;
     }
