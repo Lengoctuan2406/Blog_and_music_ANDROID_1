@@ -11,6 +11,7 @@
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_150dp"
         android:background="@color/FF4F4F4F"
+        android:src="@drawable/img_background_customer_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,9 +28,9 @@
 
         <ImageView
             android:id="@+id/img_avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/image_customer_test"></ImageView>
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_200dp"
+            android:src="@drawable/image_customer_test_1"></ImageView>
     </androidx.cardview.widget.CardView>
 
 
@@ -80,8 +81,8 @@
             <!--            icon change your infor-->
             <ImageView
                 android:id="@+id/icon_changeYourinfor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_pencil" />
             <!--            text view change your infor-->
             <TextView
@@ -92,7 +93,7 @@
                 android:layout_marginStart="@dimen/_10dp"
                 android:fontFamily="@font/robotoregular"
                 android:text="Change your infor"
-                android:textSize="@dimen/_text_24sp" />
+                android:textSize="@dimen/_text_16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -104,8 +105,8 @@
             <!--            icon your history-->
             <ImageView
                 android:id="@+id/icon_yourHistory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_check_history" />
 
             <!--            text View your history-->
@@ -117,7 +118,7 @@
                 android:layout_marginStart="@dimen/_10dp"
                 android:fontFamily="@font/robotoregular"
                 android:text="Your history"
-                android:textSize="@dimen/_text_24sp" />
+                android:textSize="@dimen/_text_16sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -127,7 +128,7 @@
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_1dp"
         android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_120dp"
+        android:layout_marginTop="@dimen/_100dp"
         android:layout_marginEnd="@dimen/_24dp"
         android:background="@color/FF4F4F4F"
         app:layout_constraintEnd_toEndOf="parent"
@@ -156,8 +157,8 @@
             <!--            icon Logout-->
             <ImageView
                 android:id="@+id/icon_logOut"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_logout" />
             <!--            text logout-->
             <TextView
@@ -169,7 +170,7 @@
                 android:fontFamily="@font/robotoregular"
                 android:text="Logout"
                 android:textColor="@color/FF1A6A77"
-                android:textSize="@dimen/_text_24sp" />
+                android:textSize="@dimen/_text_16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -181,8 +182,8 @@
             <!--            icon lock account-->
             <ImageView
                 android:id="@+id/icon_lockAccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_32dp"
+                android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_lock" />
 
             <!--            text lock account-->
@@ -195,7 +196,7 @@
                 android:fontFamily="@font/robotoregular"
                 android:text="Lock Account"
                 android:textColor="@color/FF771A1A"
-                android:textSize="@dimen/_text_24sp" />
+                android:textSize="@dimen/_text_16sp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -27,17 +27,23 @@
             android:id="@+id/name_list_blog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Name's blog"
             android:fontFamily="@font/robotobold"
+            android:paddingStart="@dimen/_8dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:text="Name's blog"
             android:textSize="@dimen/_18dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/address_list_blog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8dp"
             android:fontFamily="@font/robotoregular"
+            android:paddingStart="@dimen/_8dp"
+            android:paddingEnd="@dimen/_8dp"
             android:text="Address"
-            android:textSize="@dimen/_text_16sp"/>
+            android:textSize="@dimen/_text_16sp" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

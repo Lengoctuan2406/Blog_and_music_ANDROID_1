@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
@@ -20,6 +21,7 @@ public class DetailRoom extends AppCompatActivity {
     ViewFlipper viewFlipper;
     TextView textView30;
     ImageView imageView14;
+    Button button4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,15 @@ public class DetailRoom extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, Policies.class);
+                startActivity(i);
+            }
+        });
+
+        button4 = findViewById(R.id.button4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(DetailRoom.this, RoomHistory.class);
                 startActivity(i);
             }
         });

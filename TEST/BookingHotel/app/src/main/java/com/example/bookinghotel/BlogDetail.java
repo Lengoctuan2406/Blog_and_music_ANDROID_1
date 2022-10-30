@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bookinghotel.adapter.blog;
 
 public class BlogDetail extends AppCompatActivity {
-//
+    //
 //    TextView body_des_blog;
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +27,24 @@ public class BlogDetail extends AppCompatActivity {
 //                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
 //                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
 //                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...");
-TextView body_des_blog,nameBlog, addressBlog;
+    TextView body_des_blog, nameBlog, addressBlog;
     ImageView imgBlog, icon_arrowback_blogFragment;
     blog blog;
+    Button btn_des_blog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_detail);
+
+        btn_des_blog = findViewById(R.id.btn_des_blog);
+        btn_des_blog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(BlogDetail.this, Searching.class);
+                startActivity(i);
+            }
+        });
 
         icon_arrowback_blogFragment = findViewById(R.id.icon_arrowback_blogFragment);
         icon_arrowback_blogFragment.setOnClickListener(new View.OnClickListener() {
