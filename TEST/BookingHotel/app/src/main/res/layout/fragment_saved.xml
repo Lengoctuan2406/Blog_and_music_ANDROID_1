@@ -43,14 +43,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         android:layout_width="@dimen/_200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/radius_blue_all"
+        android:gravity="center"
         android:text="Start searching"
         android:textColor="@color/white"
+        android:textSize="@dimen/_text_16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

@@ -33,7 +33,7 @@
     <!--  NAME  -->
 
     <!--    text name customer-->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_changeAvatar"
         android:layout_width="@dimen/_150dp"
         android:layout_height="@dimen/_0dp"
@@ -223,7 +223,7 @@
         app:layout_constraintStart_toEndOf="@+id/textView_phone"
         app:layout_constraintTop_toBottomOf="@+id/checkbox_gender_male" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_saveChangeInfor_accountFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -238,7 +238,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_phone" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_cancelChangeinfor_accountFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

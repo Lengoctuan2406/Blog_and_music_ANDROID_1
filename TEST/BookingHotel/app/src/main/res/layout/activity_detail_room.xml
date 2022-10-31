@@ -162,7 +162,7 @@
                 app:srcCompat="@drawable/radius_black_top_left_right" />
 
             <LinearLayout
-                android:layout_width="@dimen/_350dp"
+                android:layout_width="@dimen/_300dp"
                 android:layout_height="@dimen/_100dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_16dp"
@@ -424,9 +424,10 @@
                     android:orientation="horizontal" />
             </LinearLayout>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button4"
                 android:layout_width="@dimen/_150dp"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/_16dp"

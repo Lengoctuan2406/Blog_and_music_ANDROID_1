@@ -126,12 +126,13 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_des_blog"
         android:layout_width="@dimen/_150dp"
         android:layout_height="@dimen/_50dp"
         android:layout_marginBottom="@dimen/_8dp"
         android:gravity="center"
+        android:background="@drawable/radius_white_all"
         android:text="Book Now"
         app:cornerRadius="@dimen/_20dp"
         app:layout_constraintBottom_toBottomOf="parent"

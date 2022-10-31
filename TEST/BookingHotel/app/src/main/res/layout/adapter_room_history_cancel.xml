@@ -29,8 +29,8 @@
             <!--Image hotel-->
             <ImageView
                 android:id="@+id/img_roomHistory_cancel"
-                android:layout_width="@dimen/_190dp"
-                android:layout_height="@dimen/_300dp"
+                android:layout_width="@dimen/_150dp"
+                android:layout_height="@dimen/_250dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/image_blog_1" />
 

@@ -103,13 +103,14 @@
                 android:text="1 Room - Double beds"
                 android:textSize="@dimen/_16dp" />
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button"
                 android:layout_width="@dimen/_200dp"
                 android:layout_height="@dimen/_40dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/_16dp"
                 android:background="@drawable/radius_black_all"
+                android:gravity="center"
                 android:text="Search"
                 android:textAlignment="center"
                 android:textColor="@color/white" />
