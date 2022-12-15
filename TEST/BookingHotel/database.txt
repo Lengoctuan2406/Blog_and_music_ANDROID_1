@@ -1,0 +1,106 @@
+Table users {
+  	user_id varchar pk
+  
+  	account_name varchar
+  	email varchar
+  	password varchar
+  	date_of_birth datetime
+  	gender varchar
+  	phone varchar
+  	avatar varchar
+  	facebook varchar
+  	instagram varchar
+
+  	role varchar
+}
+
+Table hotels {
+  	hotel_id varchar pk
+
+  	name varchar
+  	description varchar
+	country_id varchar
+	address varchar
+  	picture_1 varchar
+  	picture_2 varchar
+  	picture_3 varchar
+	hotel_details_id varchar
+	star int
+	//date_start (ngày bắt đầu)
+	//date_end (ngày kết thúc)
+}
+
+Table hotel_details {
+  	hotel_details_id varchar pk
+  
+  	type_of_room_id varchar
+	description_type_of_room varchar
+	description varchar
+	price float (dạng dollars)
+	status varchar
+}
+
+Table types_of_room {
+  	type_of_room_id varchar pk
+
+  	type_of_room varchar //có thể Double room, Single room, Tripper room
+}
+
+Table rela_hotels_services {
+  	hotels_services_id varchar pk
+
+  	hotel_id varchar
+  	service_id varchar
+}
+
+Table services {
+  	id varchar pk //có thể có Free Wifi,...
+  
+  	service_name varchar
+}
+
+Table comments {
+  	comments_id varchar pk
+  
+  	hotel_id varchar
+  	blog_id varchar
+	user_id varchar
+  	content varchar
+  	status varchar
+}
+
+Table orders {
+  	other_id varchar pk
+  
+	user_id varchar
+  	hotel_id varchar
+  	status varchar
+}
+
+Table blogs {
+  	blog_id varchar pk
+
+  	title varchar
+  	content varchar
+  	picture varchar
+	country_id varchar
+  	status varchar
+
+  	created_by varchar
+  	date_entered datetime
+  	date_modified datetime
+  	deleted int
+}
+
+Table countries {
+  	country_id varchar pk
+
+	country_name varchar
+}
+
+Table saved {
+  	saved_id varchar pk
+
+	user_id varchar
+	hotel_id varchar
+}

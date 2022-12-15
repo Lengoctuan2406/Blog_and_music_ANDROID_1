@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Searching">
+
+    <ImageView
+        android:id="@+id/icon_arrowback_resultSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_30dp"
+        android:src="@drawable/icon_back_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_resultSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30dp"
+        android:text="Search"
+        android:fontFamily="@font/robotoregular"
+        android:textSize="@dimen/_text_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/btn_search_resultSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_80dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:background="@drawable/radius_white_all"
+        android:drawableStart="@drawable/icon_search"
+        android:drawablePadding="@dimen/_16dp"
+        android:hint="Searching"
+        android:textColor="@color/FF444444"
+        android:paddingStart="@dimen/_24dp"
+        android:paddingEnd="@dimen/_5dp"
+        android:textSize="@dimen/_text_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvc_list_resultSearch"
+        android:layout_marginTop="@dimen/_150dp"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

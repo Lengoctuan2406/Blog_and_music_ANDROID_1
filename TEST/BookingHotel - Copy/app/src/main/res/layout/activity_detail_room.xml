@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="4dp"
+    tools:context=".DetailRoom">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/viewflipper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_250dp"></ViewFlipper>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_32dp"
+                android:gravity="center"
+                android:text="Fusion Original Saigon Centre"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_text_20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="@dimen/_270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="Fusion Original Saigon Centre has a restaurant, outdoor swimming pool, a fitness center and bar in Ho Chi Minh City. Among the facilities at this property are a 24-hour front desk and room service, along with free WiFi throughout the property."
+                android:textSize="@dimen/_text_14sp" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_270dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_baseline_location_on_24" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3dp"
+                    android:layout_weight="1"
+                    android:text="65 Đường Lê Lợi Takashimaya Saigon Centre,  District 1, Ho Chi Minh City, Vietnam" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/img_detail_room_1" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/img_detail_room_2" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/img_detail_room_3" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="@dimen/_350dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16dp"
+                android:background="@drawable/border_cardview"
+                app:srcCompat="@drawable/radius_black_top_left_right" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_300dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Price for 1 night, 2 days" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="US$20"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_text_20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_16dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="See pictures"
+                    android:textColor="@color/FF247FC0" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="@dimen/_5dp"
+                    android:layout_height="@dimen/_20dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/icon_back_right" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="@dimen/_350dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_cardview"
+                app:srcCompat="@drawable/radius_black_top_left_right" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_300dp"
+                android:layout_height="@dimen/_100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_180dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="Check-in"
+                        android:textColor="@color/FF000000" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="Friday, 17th July"
+                        android:textColor="@color/FF056DB7" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="Rooms and guests"
+                        android:textColor="@color/FF000000" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="1 Room, 2 Adults, 0 Children"
+                        android:textColor="@color/FF056DB7" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="Check-out"
+                        android:textColor="@color/FF000000" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="Sunday, 19th July"
+                        android:textColor="@color/FF056DB7" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="@dimen/_350dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_16dp"
+                android:background="@drawable/border_cardview"
+                app:srcCompat="@drawable/radius_black_top_left_right" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_300dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_150dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:paddingTop="@dimen/_8dp"
+                        android:text="Read reviews" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25dp"
+                        android:text="Read all 124 reviews"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_text_14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_16dp"
+                    android:layout_weight="1"
+                    android:text="See reviews"
+                    android:textColor="@color/FF247FC0" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="@dimen/_5dp"
+                    android:layout_height="@dimen/_20dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/icon_back_right" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="@dimen/_350dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_cardview"
+                app:srcCompat="@drawable/radius_black_top_left_right" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_300dp"
+                android:layout_height="@dimen/_110dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SERVICES:"
+                    android:textColor="@color/FF056DB7"
+                    android:textSize="@dimen/_text_20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25dp"
+                            android:text="- Airport shuttle"
+                            android:textColor="@color/FF000000" />
+
+                        <TextView
+                            android:id="@+id/textView19"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25dp"
+                            android:text="- Non-smoking room"
+                            android:textColor="@color/FF000000" />
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25dp"
+                            android:text="- Family rooms"
+                            android:textColor="@color/FF000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_150dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25dp"
+                            android:text="- Free Wifi"
+                            android:textColor="@color/FF000000" />
+
+                        <TextView
+                            android:id="@+id/textView24"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25dp"
+                            android:text="- Restaurant"
+                            android:textColor="@color/FF000000" />
+
+                        <TextView
+                            android:id="@+id/textView25"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25dp"
+                            android:text="- Spa center"
+                            android:textColor="@color/FF000000" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="@dimen/_350dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border_cardview"
+                app:srcCompat="@drawable/radius_black_top_left_right" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_300dp"
+                android:layout_height="@dimen/_130dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="POLICIES:"
+                    android:textColor="@color/FF056DB7"
+                    android:textSize="@dimen/_text_20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25dp"
+                    android:text="Check-in from 14:00 until 00:00 "
+                    android:textColor="@color/FF000000" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25dp"
+                    android:text="Check-out from 12:00 until 12:00"
+                    android:textColor="@color/FF000000" />
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25dp"
+                    android:text="No booking or credit card fees"
+                    android:textColor="@color/FF000000" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25dp"
+                    android:text="See policies of the property "
+                    android:textColor="@color/FF056DB7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button4"
+                android:layout_width="@dimen/_150dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_16dp"
+                android:background="@drawable/radius_black_all"
+                android:text="Select rooms" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
