@@ -13,13 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.adapter.AdapterRoomHistoryDoing;
-import com.example.bookinghotel.adapter.room_history;
+import com.example.bookinghotel.database.room_history;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DoingFragment extends Fragment {
-
     RecyclerView recyclerView_doing;
 
     @Override
@@ -36,21 +35,16 @@ public class DoingFragment extends Fragment {
 
     private List<room_history> getListRoom_Doing() {
         List<room_history> room_histories = new ArrayList<>();
-
         room_histories.add(new room_history(R.drawable.hotelroom2, "BONITA GRAND HOTEL", 25, 1, "2N - 1D", "Single beds", "Da Nang"));
         room_histories.add(new room_history(R.drawable.hotelroom1, "A IN RIVERSIDE HOTEL", 30, 1, "2N - 1D", "Single beds", "Hoi An"));
         room_histories.add(new room_history(R.drawable.hotelroom3, "BONITA SIGNATURE HOTEL", 14, 1, "2N - 1D", "Single beds", "Da Nang"));
         room_histories.add(new room_history(R.drawable.hotelroom1, "BONITA HÙNG VƯƠNG", 15, 1, "2N - 1D", "Single beds", "Da Nang"));
-
         return room_histories;
-
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_doing, container, false);
     }
 }

@@ -28,7 +28,7 @@
 
             <!--Image hotel-->
             <ImageView
-                android:id="@+id/img_roomHistory_cancel"
+                android:id="@+id/_154"
                 android:layout_width="@dimen/_150dp"
                 android:layout_height="@dimen/_250dp"
                 android:scaleType="centerCrop"
@@ -46,7 +46,7 @@
 
                 <!--            Ten hotel-->
                 <TextView
-                    android:id="@+id/NameroomHistory_cancel"
+                    android:id="@+id/_155"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_10dp"
@@ -63,7 +63,7 @@
                     android:orientation="horizontal">
                     <!--                Text gia-->
                     <TextView
-                        android:id="@+id/PiceroomHistory_cancel"
+                        android:id="@+id/_156"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -74,7 +74,7 @@
 
                     <!--                Gia phong-->
                     <TextView
-                        android:id="@+id/txt_PiceroomHistory_cancel"
+                        android:id="@+id/_157"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10dp"
@@ -87,7 +87,7 @@
                 <!--            LinearLayout so ngay dem-->
                 <!--So dem-->
                 <TextView
-                    android:id="@+id/txt_StayRoomHistory_cancel"
+                    android:id="@+id/_158"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
@@ -99,7 +99,7 @@
 
                 <!--            LinearLayout cua so phong va loai phong-->
                 <TextView
-                    android:id="@+id/txt_TyperoomHistory_cancel"
+                    android:id="@+id/_159"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotoregular"
@@ -115,7 +115,7 @@
 
                     <!--                Text address-->
                     <TextView
-                        android:id="@+id/AddressroomHistory_cancel"
+                        android:id="@+id/_160"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
@@ -124,7 +124,7 @@
                         android:textSize="@dimen/_16dp" />
                     <!--                Dia chi-->
                     <TextView
-                        android:id="@+id/txt_AddressroomHistory_cancel"
+                        android:id="@+id/_161"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10dp"

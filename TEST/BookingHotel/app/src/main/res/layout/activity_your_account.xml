@@ -7,7 +7,7 @@
     tools:context=".YourAccount">
 
     <ImageView
-        android:id="@+id/icon_arrowback_accountFragment"
+        android:id="@+id/_124"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
     <!--    CHỮ BLOG ĐẦU TRANG-->
     <TextView
-        android:id="@+id/text_yourInfor_accountFragment"
+        android:id="@+id/_125"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_25dp"
@@ -34,7 +34,7 @@
 
     <!--    text name customer-->
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_changeAvatar"
+        android:id="@+id/_126"
         android:layout_width="@dimen/_150dp"
         android:layout_height="@dimen/_0dp"
         android:layout_gravity="right"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_name"
+        android:id="@+id/_127"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
@@ -60,14 +60,14 @@
         android:text="Name"
         android:textSize="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_changeAvatar" />
+        app:layout_constraintTop_toBottomOf="@+id/_126" />
 
     <!--  BIRTHDAY  -->
 
     <!--    text birthday customer-->
 
     <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/_128"
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
@@ -81,11 +81,11 @@
         android:textSize="@dimen/_18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_name"
-        app:layout_constraintTop_toBottomOf="@+id/btn_changeAvatar" />
+        app:layout_constraintStart_toEndOf="@+id/_127"
+        app:layout_constraintTop_toBottomOf="@+id/_126" />
 
     <TextView
-        android:id="@+id/textView_birthday"
+        android:id="@+id/_129"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_40dp"
         android:layout_marginStart="@dimen/_32dp"
@@ -95,12 +95,12 @@
         android:text="Birthday"
         android:textSize="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+        app:layout_constraintTop_toBottomOf="@+id/_127" />
 
     <!-- EMAIL -->
     <!--    text email customer-->
     <Spinner
-        android:id="@+id/txtBirthday"
+        android:id="@+id/_130"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -114,11 +114,11 @@
         android:textSize="@dimen/_18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_birthday"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+        app:layout_constraintStart_toEndOf="@+id/_129"
+        app:layout_constraintTop_toBottomOf="@+id/_128" />
 
     <TextView
-        android:id="@+id/textView_email"
+        android:id="@+id/_131"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
@@ -127,12 +127,12 @@
         android:text="Email"
         android:textSize="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_birthday" />
+        app:layout_constraintTop_toBottomOf="@+id/_129" />
 
     <!--    text gender customer-->
 
     <EditText
-        android:id="@+id/txtEmail"
+        android:id="@+id/_132"
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
@@ -146,11 +146,11 @@
         android:textSize="@dimen/_18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.051"
-        app:layout_constraintStart_toEndOf="@+id/textView_email"
-        app:layout_constraintTop_toBottomOf="@+id/txtBirthday" />
+        app:layout_constraintStart_toEndOf="@+id/_131"
+        app:layout_constraintTop_toBottomOf="@+id/_130" />
 
     <TextView
-        android:id="@+id/textView_gender"
+        android:id="@+id/_133"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
@@ -159,13 +159,13 @@
         android:text="Gender"
         android:textSize="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_email" />
+        app:layout_constraintTop_toBottomOf="@+id/_131" />
 
     <!--    Checkbox male-->
 
     <!--    Checkbox female-->
     <RadioButton
-        android:id="@+id/checkbox_gender_male"
+        android:id="@+id/_134"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16dp"
@@ -173,13 +173,13 @@
         android:checked="true"
         android:text="Male"
         android:textSize="@dimen/_18dp"
-        app:layout_constraintStart_toEndOf="@+id/textView_gender"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        app:layout_constraintStart_toEndOf="@+id/_133"
+        app:layout_constraintTop_toBottomOf="@+id/_132" />
 
     <!--    PHONE-->
 
     <RadioButton
-        android:id="@+id/checkbox_gender_female"
+        android:id="@+id/_135"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
@@ -187,12 +187,12 @@
         android:checked="false"
         android:text="Female"
         android:textSize="@dimen/_18dp"
-        app:layout_constraintStart_toEndOf="@+id/checkbox_gender_male"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+        app:layout_constraintStart_toEndOf="@+id/_134"
+        app:layout_constraintTop_toBottomOf="@+id/_132" />
 
     <!--    TEXT PHONE-->
     <TextView
-        android:id="@+id/textView_phone"
+        android:id="@+id/_136"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
@@ -201,12 +201,12 @@
         android:text="Phone"
         android:textSize="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_gender" />
+        app:layout_constraintTop_toBottomOf="@+id/_133" />
 
     <!--    BTN SAVE-->
 
     <EditText
-        android:id="@+id/txtPhone"
+        android:id="@+id/_137"
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
@@ -220,11 +220,11 @@
         android:textSize="@dimen/_18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView_phone"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_gender_male" />
+        app:layout_constraintStart_toEndOf="@+id/_136"
+        app:layout_constraintTop_toBottomOf="@+id/_134" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_saveChangeInfor_accountFragment"
+        android:id="@+id/_138"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -236,10 +236,10 @@
         android:textSize="@dimen/_text_12sp"
         app:cornerRadius="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/_136" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_cancelChangeinfor_accountFragment"
+        android:id="@+id/_139"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -254,16 +254,7 @@
         app:cornerRadius="@dimen/_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_saveChangeInfor_accountFragment"
-        app:layout_constraintTop_toBottomOf="@+id/textView_phone" />
+        app:layout_constraintStart_toEndOf="@+id/_138"
+        app:layout_constraintTop_toBottomOf="@+id/_136" />
 
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     tools:context=".BlogDetail">
 
     <ImageView
-        android:id="@+id/icon_arrowback_blogFragment"
+        android:id="@+id/_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_blog_blogFragment"
+        android:id="@+id/_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_30dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/scrollView_des_blog"
+        android:id="@+id/_3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/_16dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout_des_blog"
+            android:id="@+id/_4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -50,6 +50,7 @@
             app:layout_constraintBottom_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20dp"
@@ -58,11 +59,12 @@
 
                 <!--                IMAGE BLOG-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/_6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <ImageView
-                        android:id="@+id/img_des_blog"
+                        android:id="@+id/_7"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_200dp"
                         android:src="@drawable/image_customer_test" />
@@ -71,12 +73,13 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/_8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
                 <!--                TEN CUA BLOG-->
                 <TextView
-                    android:id="@+id/name_des_blog"
+                    android:id="@+id/_9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
@@ -86,12 +89,13 @@
             </LinearLayout>
             <!--            CHIA LAYOUT-->
             <LinearLayout
+                android:id="@+id/_10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
                 <!--                DIA CHI BAI BLOG-->
                 <TextView
-                    android:id="@+id/address_des_blog"
+                    android:id="@+id/_11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotoregular"
@@ -101,12 +105,13 @@
             </LinearLayout>
             <!--            CHIA LAYOUT-->
             <LinearLayout
+                android:id="@+id/_12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
                 <!--                NOI DUNG CUA BLOG-->
                 <TextView
-                    android:id="@+id/body_des_blog"
+                    android:id="@+id/_13"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotolight"
@@ -115,19 +120,11 @@
                     android:textSize="@dimen/_text_16sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center">
-                <!--                BTN BOOK NOW CUA BLOG-->
-
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_des_blog"
+        android:id="@+id/_14"
         android:layout_width="@dimen/_150dp"
         android:layout_height="@dimen/_50dp"
         android:layout_marginBottom="@dimen/_8dp"

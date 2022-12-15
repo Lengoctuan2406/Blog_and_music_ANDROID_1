@@ -6,15 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class YourAccount extends AppCompatActivity {
     ImageView icon_arrowback_accountFragment;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_your_account);
-        icon_arrowback_accountFragment = findViewById(R.id.icon_arrowback_accountFragment);
+
+    public void findViewById() {
+        icon_arrowback_accountFragment = findViewById(R.id._124);
+    }
+
+    public void setOnClickListener() {
         icon_arrowback_accountFragment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -23,5 +23,17 @@ public class YourAccount extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    public void others() {
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_your_account);
+        findViewById();
+        setOnClickListener();
+        others();
     }
 }

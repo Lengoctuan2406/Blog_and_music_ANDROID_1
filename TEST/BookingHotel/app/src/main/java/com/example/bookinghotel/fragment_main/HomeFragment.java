@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.bookinghotel.BlogDetail;
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.Searching;
 
@@ -22,7 +21,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        button = (Button) view.findViewById(R.id.button);
+        //findViewById
+        button = (Button) view.findViewById(R.id._195);
+        //------------
+
+        //setOnClickListener
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,13 +33,12 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
+        //------------------
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
-
 }

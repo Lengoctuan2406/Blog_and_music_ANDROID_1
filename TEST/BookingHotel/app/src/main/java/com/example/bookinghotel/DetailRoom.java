@@ -19,51 +19,50 @@ import java.util.List;
 
 public class DetailRoom extends AppCompatActivity {
     ViewFlipper viewFlipper;
-    TextView textView30;
-    ImageView imageView14, imageView20;
-    Button button4;
+    TextView _70;
+    ImageView _33, _51;
+    Button _72;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_room);
-        textView30 = findViewById(R.id.textView30);
-        textView30.setOnClickListener(new View.OnClickListener() {
+    public void findViewById() {
+        _70 = findViewById(R.id._70);
+        _51 = findViewById(R.id._51);
+        _72 = findViewById(R.id._72);
+        _33 = findViewById(R.id._33);
+        viewFlipper = findViewById(R.id._17);
+    }
+
+    public void setOnClickListener() {
+        _70.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, Policies.class);
                 startActivity(i);
             }
         });
-        imageView20 = findViewById(R.id.imageView20);
-        imageView20.setOnClickListener(new View.OnClickListener() {
+        _51.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, Review.class);
                 startActivity(i);
             }
         });
-
-        button4 = findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
+        _72.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, RoomHistory.class);
                 startActivity(i);
             }
         });
-
-        imageView14 = findViewById(R.id.imageView14);
-        imageView14.setOnClickListener(new View.OnClickListener() {
+        _33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, SeePictures.class);
                 startActivity(i);
             }
         });
+    }
 
-        Anhxa();
-        ActionViewFlipper();
+    public void others() {
     }
 
     private void ActionViewFlipper() {
@@ -79,14 +78,20 @@ public class DetailRoom extends AppCompatActivity {
         }
         viewFlipper.setFlipInterval(3000);
         viewFlipper.setAutoStart(true);
-//        set animation
+
         Animation slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_right);
         Animation slide_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out_right);
         viewFlipper.setInAnimation(slide_in);
         viewFlipper.setOutAnimation(slide_out);
     }
-    private void Anhxa() {
-        viewFlipper= findViewById(R.id.viewflipper);
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detail_room);
+        findViewById();
+        setOnClickListener();
+        others();
+        ActionViewFlipper();
     }
 }

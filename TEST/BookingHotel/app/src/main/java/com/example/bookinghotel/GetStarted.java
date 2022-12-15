@@ -8,27 +8,39 @@ import android.view.View;
 import android.widget.Button;
 
 public class GetStarted extends AppCompatActivity {
-    Button button2, button3;
+    Button _76, _77;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_get_started);
-        button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+    public void findViewById() {
+        _76 = findViewById(R.id._76);
+        _77 = findViewById(R.id._77);
+    }
+
+    public void setOnClickListener() {
+        _76.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(GetStarted.this, LogIn.class);
                 startActivity(i);
             }
         });
-        button3 = findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
+        _77.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(GetStarted.this, SignUp.class);
                 startActivity(i);
             }
         });
+    }
+
+    public void others() {
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_get_started);
+        findViewById();
+        setOnClickListener();
+        others();
     }
 }

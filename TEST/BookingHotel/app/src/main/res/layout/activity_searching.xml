@@ -7,7 +7,7 @@
     tools:context=".Searching">
 
     <ImageView
-        android:id="@+id/icon_arrowback_resultSearch"
+        android:id="@+id/_107"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text_resultSearch"
+        android:id="@+id/_108"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_30dp"
@@ -30,7 +30,7 @@
 
 
     <EditText
-        android:id="@+id/btn_search_resultSearch"
+        android:id="@+id/_109"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50dp"
         android:layout_marginStart="@dimen/_20dp"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvc_list_resultSearch"
+        android:id="@+id/_110"
         android:layout_marginTop="@dimen/_150dp"
         android:layout_marginStart="@dimen/_20dp"
         android:layout_marginEnd="@dimen/_20dp"

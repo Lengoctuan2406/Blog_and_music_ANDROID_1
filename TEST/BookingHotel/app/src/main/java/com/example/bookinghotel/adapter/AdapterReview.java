@@ -10,14 +10,35 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookinghotel.R;
+import com.example.bookinghotel.database.review;
 
 import java.util.List;
 
-public class AdapterReview  extends RecyclerView.Adapter<AdapterReview.ListReview> {
-    private List<review> reviews;
+public class AdapterReview extends RecyclerView.Adapter<AdapterReview.ListReview> {
+    private List<review> reviewsList;
 
-    public AdapterReview(List<review> reviews) {
-        this.reviews = reviews;
+    public AdapterReview(List<review> reviewsList) {
+        this.reviewsList = reviewsList;
+    }
+
+    @Override
+    public int getItemCount() {
+        if (reviewsList != null) {
+            return reviewsList.size();
+        }
+        return 0;
+    }
+
+    public class ListReview extends RecyclerView.ViewHolder {
+        private ImageView _150;
+        private TextView _151, _153;
+
+        public ListReview(@NonNull View itemView) {
+            super(itemView);
+            _150 = itemView.findViewById(R.id._150);
+            _151 = itemView.findViewById(R.id._151);
+            _153 = itemView.findViewById(R.id._153);
+        }
     }
 
     @NonNull
@@ -29,34 +50,12 @@ public class AdapterReview  extends RecyclerView.Adapter<AdapterReview.ListRevie
 
     @Override
     public void onBindViewHolder(@NonNull AdapterReview.ListReview holder, int position) {
-        review review = reviews.get(position);
-        if(review == null) {
+        review review = reviewsList.get(position);
+        if (review == null) {
             return;
         }
-        holder.avatar.setImageResource(review.getAvatar());
-        holder.name.setText(review.getCreate_by());
-        holder.content.setText(review.getContent());
-    }
-
-    @Override
-    public int getItemCount() {
-        if(reviews != null){
-            return reviews.size();
-        }
-        return 0;
-    }
-
-    public class ListReview extends RecyclerView.ViewHolder {
-        private ImageView avatar;
-        private TextView name, content;
-
-
-        public ListReview(@NonNull View itemView) {
-            super(itemView);
-
-            avatar = itemView.findViewById(R.id.img_review);
-            name = itemView.findViewById(R.id.name_review);
-            content = itemView.findViewById(R.id.content_review);
-        }
+        holder._150.setImageResource(review.getAvatar());
+        holder._151.setText(review.getCreate_by());
+        holder._153.setText(review.getContent());
     }
 }

@@ -10,15 +10,39 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookinghotel.R;
+import com.example.bookinghotel.database.room_history;
 
 import java.util.List;
 
 public class AdapterRoomHistoryDone extends RecyclerView.Adapter<AdapterRoomHistoryDone.ListRoomHistory>{
 
-    private List<room_history> roomHistoryModel;
+    private List<room_history> roomhistoryList;
 
-    public AdapterRoomHistoryDone(List<room_history> roomHistoryModel) {
-        this.roomHistoryModel = roomHistoryModel;
+    public AdapterRoomHistoryDone(List<room_history> roomhistoryList) {
+        this.roomhistoryList = roomhistoryList;
+    }
+
+    @Override
+    public int getItemCount() {
+        if(roomhistoryList != null) {
+            return roomhistoryList.size();
+        }
+        return 0;
+    }
+
+    public class ListRoomHistory extends RecyclerView.ViewHolder{
+        private ImageView _171;
+        private TextView _172, _174, _176, _175, _178;
+
+        public ListRoomHistory(@NonNull View itemView) {
+            super(itemView);
+            _171 = itemView.findViewById(R.id._171);
+            _172 = itemView.findViewById(R.id._172);
+            _174 = itemView.findViewById(R.id._174);
+            _176 = itemView.findViewById(R.id._176);
+            _178 = itemView.findViewById(R.id._178);
+            _175 = itemView.findViewById(R.id._175);
+        }
     }
 
     @NonNull
@@ -31,45 +55,15 @@ public class AdapterRoomHistoryDone extends RecyclerView.Adapter<AdapterRoomHist
     @Override
     public void onBindViewHolder(@NonNull ListRoomHistory holder, int position) {
 
-        final room_history room_history_1 = roomHistoryModel.get(position);
+        final room_history room_history_1 = roomhistoryList.get(position);
         if (room_history_1 == null) {
             return;
         }
-        holder.img_roomHistory.setImageResource(room_history_1.getImgRoomHistory());
-        holder.nameHotel.setText(room_history_1.getNameHotelHistory());
-//        holder.priceRoom.setText(room_history_1.getPriceRoomHistory());
-        holder.priceRoom.setText(String.valueOf(room_history_1.getPriceRoomHistory()));
-        holder.stayDate.setText(room_history_1.getStayDate());
-        holder.typeRoom.setText(room_history_1.getTypeRoomHistory());
-        holder.addressHotel.setText(room_history_1.getAddressRoomHistory());
-    }
-
-    @Override
-    public int getItemCount() {
-        if(roomHistoryModel != null) {
-            return roomHistoryModel.size();
-        }
-        return 0;
-    }
-
-    public class ListRoomHistory extends RecyclerView.ViewHolder{
-
-        private ImageView img_roomHistory;
-        private TextView nameHotel, priceRoom, typeRoom, stayDate, addressHotel;
-//        private Button btncancelRoom;
-
-        public ListRoomHistory(@NonNull View itemView) {
-            super(itemView);
-
-            img_roomHistory = itemView.findViewById(R.id.img_roomHistory_done);
-            nameHotel = itemView.findViewById(R.id.NameroomHistory_done);
-            priceRoom = itemView.findViewById(R.id.txt_PiceroomHistory_done);
-            typeRoom = itemView.findViewById(R.id.txt_TyperoomHistory_done);
-            addressHotel = itemView.findViewById(R.id.txt_AddressroomHistory_done);
-            stayDate = itemView.findViewById(R.id.txt_StayRoomHistory_done);
-//            btncancelRoom = itemView.findViewById(R.id.btn_cancel_roomHistory);
-
-
-        }
+        holder._171.setImageResource(room_history_1.getImgRoomHistory());
+        holder._172.setText(room_history_1.getNameHotelHistory());
+        holder._174.setText(String.valueOf(room_history_1.getPriceRoomHistory()));
+        holder._175.setText(room_history_1.getStayDate());
+        holder._176.setText(room_history_1.getTypeRoomHistory());
+        holder._178.setText(room_history_1.getAddressRoomHistory());
     }
 }

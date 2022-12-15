@@ -14,13 +14,12 @@ import android.view.ViewGroup;
 
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.adapter.AdapterRoomHistoryDone;
-import com.example.bookinghotel.adapter.room_history;
+import com.example.bookinghotel.database.room_history;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DoneFragment extends Fragment {
-
     RecyclerView recyclerView_done;
 
     @Override
@@ -37,21 +36,16 @@ public class DoneFragment extends Fragment {
 
     private List<room_history> getListRoom_Done() {
         List<room_history> room_histories = new ArrayList<>();
-
         room_histories.add(new room_history(R.drawable.hotelroom2, "CLOUD 9 HOTEL ĐƯỜNG 21", 25, 0, "2N - 1D", "Single beds", "Da Nang"));
         room_histories.add(new room_history(R.drawable.hotelroom3, "LÁ HOTEL PHÚ NHUẬN", 30, 0, "2N - 1D", "Single beds", "Hoi An"));
         room_histories.add(new room_history(R.drawable.hotelroom1, "Z HOTEL", 14, 0, "2N - 1D", "Single beds", "Da Nang"));
         room_histories.add(new room_history(R.drawable.hotelroom2, "LÁ RIVERSIDE THANH ĐA", 15, 0, "2N - 1D", "Single beds", "Da Nang"));
-
         return room_histories;
-
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_done, container, false);
     }
 }

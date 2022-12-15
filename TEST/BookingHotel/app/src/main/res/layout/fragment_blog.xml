@@ -8,7 +8,7 @@
 
 
     <EditText
-        android:id="@+id/btn_search_home"
+        android:id="@+id/_193"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50dp"
         android:layout_marginStart="@dimen/_20dp"
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/_75"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
@@ -37,7 +37,7 @@
         android:textSize="@dimen/_text_24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_search_home" />
+        app:layout_constraintTop_toBottomOf="@+id/_193" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -50,6 +50,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"></androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintTop_toBottomOf="@+id/_75"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

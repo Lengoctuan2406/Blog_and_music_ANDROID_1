@@ -8,6 +8,7 @@
     tools:context=".DetailRoom">
 
     <ScrollView
+        android:id="@+id/_15"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,17 +17,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/_16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ViewFlipper
-                android:id="@+id/viewflipper"
+                android:id="@+id/_17"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_250dp"></ViewFlipper>
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/_18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_32dp"
@@ -37,7 +39,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/_19"
                 android:layout_width="@dimen/_270dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -46,6 +48,7 @@
                 android:textSize="@dimen/_text_14sp" />
 
             <LinearLayout
+                android:id="@+id/_20"
                 android:layout_width="@dimen/_270dp"
                 android:layout_height="@dimen/_40dp"
                 android:layout_gravity="center"
@@ -53,14 +56,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/_21"
                     android:layout_width="@dimen/_60dp"
                     android:layout_height="@dimen/_40dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_baseline_location_on_24" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/_22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_3dp"
@@ -69,27 +72,28 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/_23"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100dp"
                 android:layout_marginTop="@dimen/_8dp"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/_24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/img_detail_room_1" />
 
                 <ImageView
-                    android:id="@+id/imageView11"
+                    android:id="@+id/_25"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/img_detail_room_2" />
 
                 <ImageView
-                    android:id="@+id/imageView12"
+                    android:id="@+id/_26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -97,7 +101,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView15"
+                android:id="@+id/_27"
                 android:layout_width="@dimen/_350dp"
                 android:layout_height="@dimen/_1dp"
                 android:layout_gravity="center"
@@ -106,6 +110,7 @@
                 app:srcCompat="@drawable/radius_black_top_left_right" />
 
             <LinearLayout
+                android:id="@+id/_28"
                 android:layout_width="@dimen/_300dp"
                 android:layout_height="@dimen/_50dp"
                 android:layout_gravity="center"
@@ -113,18 +118,19 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/_29"
                     android:layout_width="@dimen/_150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/_30"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Price for 1 night, 2 days" />
 
                     <TextView
-                        android:id="@+id/textView9"
+                        android:id="@+id/_31"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="US$20"
@@ -134,7 +140,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/_32"
                     android:layout_width="@dimen/_40dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -145,7 +151,7 @@
                     android:textColor="@color/FF247FC0" />
 
                 <ImageView
-                    android:id="@+id/imageView14"
+                    android:id="@+id/_33"
                     android:layout_width="@dimen/_5dp"
                     android:layout_height="@dimen/_20dp"
                     android:layout_gravity="center"
@@ -154,7 +160,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView13"
+                android:id="@+id/_34"
                 android:layout_width="@dimen/_350dp"
                 android:layout_height="@dimen/_1dp"
                 android:layout_gravity="center"
@@ -162,6 +168,7 @@
                 app:srcCompat="@drawable/radius_black_top_left_right" />
 
             <LinearLayout
+                android:id="@+id/_35"
                 android:layout_width="@dimen/_300dp"
                 android:layout_height="@dimen/_100dp"
                 android:layout_gravity="center"
@@ -169,33 +176,34 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/_36"
                     android:layout_width="@dimen/_180dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/_37"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="Check-in"
                         android:textColor="@color/FF000000" />
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/_38"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="Friday, 17th July"
                         android:textColor="@color/FF056DB7" />
 
                     <TextView
-                        android:id="@+id/textView13"
+                        android:id="@+id/_39"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="Rooms and guests"
                         android:textColor="@color/FF000000" />
 
                     <TextView
-                        android:id="@+id/textView14"
+                        android:id="@+id/_40"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="1 Room, 2 Adults, 0 Children"
@@ -203,19 +211,20 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/_42"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/_43"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="Check-out"
                         android:textColor="@color/FF000000" />
 
                     <TextView
-                        android:id="@+id/textView16"
+                        android:id="@+id/_44"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="Sunday, 19th July"
@@ -224,7 +233,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView16"
+                android:id="@+id/_45"
                 android:layout_width="@dimen/_350dp"
                 android:layout_height="@dimen/_1dp"
                 android:layout_gravity="center"
@@ -233,6 +242,7 @@
                 app:srcCompat="@drawable/radius_black_top_left_right" />
 
             <LinearLayout
+                android:id="@+id/_46"
                 android:layout_width="@dimen/_300dp"
                 android:layout_height="@dimen/_50dp"
                 android:layout_gravity="center"
@@ -240,19 +250,20 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/_47"
                     android:layout_width="@dimen/_150dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/textView20"
+                        android:id="@+id/_48"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:paddingTop="@dimen/_8dp"
                         android:text="Read reviews" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/_49"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_25dp"
                         android:text="Read all 124 reviews"
@@ -262,7 +273,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/_50"
                     android:layout_width="@dimen/_40dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -272,7 +283,7 @@
                     android:textColor="@color/FF247FC0" />
 
                 <ImageView
-                    android:id="@+id/imageView20"
+                    android:id="@+id/_51"
                     android:layout_width="@dimen/_5dp"
                     android:layout_height="@dimen/_20dp"
                     android:layout_gravity="center"
@@ -281,7 +292,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView23"
+                android:id="@+id/_52"
                 android:layout_width="@dimen/_350dp"
                 android:layout_height="@dimen/_1dp"
                 android:layout_gravity="center"
@@ -289,6 +300,7 @@
                 app:srcCompat="@drawable/radius_black_top_left_right" />
 
             <LinearLayout
+                android:id="@+id/_53"
                 android:layout_width="@dimen/_300dp"
                 android:layout_height="@dimen/_110dp"
                 android:layout_gravity="center"
@@ -296,7 +308,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView17"
+                    android:id="@+id/_54"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="SERVICES:"
@@ -305,31 +317,33 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
+                    android:id="@+id/_55"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/_56"
                         android:layout_width="@dimen/_150dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:id="@+id/_57"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_25dp"
                             android:text="- Airport shuttle"
                             android:textColor="@color/FF000000" />
 
                         <TextView
-                            android:id="@+id/textView19"
+                            android:id="@+id/_58"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_25dp"
                             android:text="- Non-smoking room"
                             android:textColor="@color/FF000000" />
 
                         <TextView
-                            android:id="@+id/textView22"
+                            android:id="@+id/_59"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_25dp"
                             android:text="- Family rooms"
@@ -337,26 +351,27 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/_60"
                         android:layout_width="@dimen/_150dp"
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textView23"
+                            android:id="@+id/_61"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_25dp"
                             android:text="- Free Wifi"
                             android:textColor="@color/FF000000" />
 
                         <TextView
-                            android:id="@+id/textView24"
+                            android:id="@+id/_62"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_25dp"
                             android:text="- Restaurant"
                             android:textColor="@color/FF000000" />
 
                         <TextView
-                            android:id="@+id/textView25"
+                            android:id="@+id/_63"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_25dp"
                             android:text="- Spa center"
@@ -367,7 +382,7 @@
 
 
             <ImageView
-                android:id="@+id/imageView24"
+                android:id="@+id/_64"
                 android:layout_width="@dimen/_350dp"
                 android:layout_height="@dimen/_1dp"
                 android:layout_gravity="center"
@@ -375,6 +390,7 @@
                 app:srcCompat="@drawable/radius_black_top_left_right" />
 
             <LinearLayout
+                android:id="@+id/_65"
                 android:layout_width="@dimen/_300dp"
                 android:layout_height="@dimen/_130dp"
                 android:layout_gravity="center"
@@ -382,7 +398,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView26"
+                    android:id="@+id/_66"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="POLICIES:"
@@ -391,48 +407,49 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView27"
+                    android:id="@+id/_67"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_25dp"
                     android:text="Check-in from 14:00 until 00:00 "
                     android:textColor="@color/FF000000" />
 
                 <TextView
-                    android:id="@+id/textView28"
+                    android:id="@+id/_68"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_25dp"
                     android:text="Check-out from 12:00 until 12:00"
                     android:textColor="@color/FF000000" />
 
                 <TextView
-                    android:id="@+id/textView29"
+                    android:id="@+id/_69"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_25dp"
                     android:text="No booking or credit card fees"
                     android:textColor="@color/FF000000" />
 
                 <TextView
-                    android:id="@+id/textView30"
+                    android:id="@+id/_70"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_25dp"
                     android:text="See policies of the property "
                     android:textColor="@color/FF056DB7" />
 
                 <LinearLayout
+                    android:id="@+id/_71"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal" />
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button4"
+                android:id="@+id/_72"
                 android:layout_width="@dimen/_150dp"
-                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/_16dp"
                 android:background="@drawable/radius_black_all"
-                android:text="Select rooms" />
+                android:text="Select rooms"
+                android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

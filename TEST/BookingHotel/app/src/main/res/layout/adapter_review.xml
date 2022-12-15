@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/_188"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
@@ -22,7 +22,7 @@
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3">
+        app:layout_constraintTop_toBottomOf="@+id/_188">
 
         <!--        LINEARLAYOUT IMG, NAME, ROLE-->
         <LinearLayout
@@ -37,7 +37,7 @@
 
                 <!--                IMAGE REVIEW-->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView1"
+                    android:id="@+id/_149"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="10dp"
@@ -47,7 +47,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/img_review"
+                        android:id="@+id/_150"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/image_customer_test" />
@@ -66,7 +66,7 @@
 
                     <!--                    NAME CUSTOMER-->
                     <TextView
-                        android:id="@+id/name_review"
+                        android:id="@+id/_151"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/robotobold"
@@ -81,7 +81,7 @@
 
                     <!--                    ROLE -->
                     <TextView
-                        android:id="@+id/role_review"
+                        android:id="@+id/_152"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
@@ -97,7 +97,7 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/content_review"
+                android:id="@+id/_153"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="This is Content review" />

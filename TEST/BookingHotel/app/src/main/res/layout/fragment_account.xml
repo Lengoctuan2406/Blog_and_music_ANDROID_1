@@ -7,7 +7,7 @@
     tools:context=".fragment_main.AccountFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/_179"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_150dp"
         android:background="@color/FF4F4F4F"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/_180"
         android:layout_width="@dimen/_200dp"
         android:layout_height="@dimen/_200dp"
         android:layout_marginTop="@dimen/_50dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/img_avatar"
+            android:id="@+id/_181"
             android:layout_width="@dimen/_200dp"
             android:layout_height="@dimen/_200dp"
             android:src="@drawable/image_customer_test_1"></ImageView>
@@ -35,7 +35,7 @@
 
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/_182"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_8dp"
@@ -45,10 +45,10 @@
         android:textSize="@dimen/_30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/_180" />
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/_183"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_1dp"
         android:layout_marginStart="@dimen/_24dp"
@@ -70,7 +70,7 @@
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2">
+        app:layout_constraintTop_toBottomOf="@+id/_183">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -80,13 +80,13 @@
             android:orientation="horizontal">
             <!--            icon change your infor-->
             <ImageView
-                android:id="@+id/icon_changeYourinfor"
+                android:id="@+id/_184"
                 android:layout_width="@dimen/_32dp"
                 android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_pencil" />
             <!--            text view change your infor-->
             <TextView
-                android:id="@+id/txt_changeYourinfor"
+                android:id="@+id/_185"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -104,14 +104,14 @@
             android:orientation="horizontal">
             <!--            icon your history-->
             <ImageView
-                android:id="@+id/icon_yourHistory"
+                android:id="@+id/_186"
                 android:layout_width="@dimen/_32dp"
                 android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_check_history" />
 
             <!--            text View your history-->
             <TextView
-                android:id="@+id/txt_yourHistory"
+                android:id="@+id/_187"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -124,7 +124,7 @@
     </LinearLayout>
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/_188"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_1dp"
         android:layout_marginStart="@dimen/_24dp"
@@ -133,7 +133,7 @@
         android:background="@color/FF4F4F4F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/_183" />
 
     <LinearLayout
         android:id="@+id/linearLayout_second"
@@ -146,7 +146,7 @@
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3">
+        app:layout_constraintTop_toBottomOf="@+id/_188">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -156,13 +156,13 @@
             android:orientation="horizontal">
             <!--            icon Logout-->
             <ImageView
-                android:id="@+id/icon_logOut"
+                android:id="@+id/_189"
                 android:layout_width="@dimen/_32dp"
                 android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_logout" />
             <!--            text logout-->
             <TextView
-                android:id="@+id/txt_logOut"
+                android:id="@+id/_190"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -181,14 +181,14 @@
             android:orientation="horizontal">
             <!--            icon lock account-->
             <ImageView
-                android:id="@+id/icon_lockAccount"
+                android:id="@+id/_191"
                 android:layout_width="@dimen/_32dp"
                 android:layout_height="@dimen/_32dp"
                 android:src="@drawable/icon_lock" />
 
             <!--            text lock account-->
             <TextView
-                android:id="@+id/txt_lockAccount"
+                android:id="@+id/_192"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

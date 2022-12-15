@@ -8,7 +8,7 @@
     tools:context=".GetStarted">
 
     <ImageView
-        android:id="@+id/image3"
+        android:id="@+id/_73"
         android:layout_width="@dimen/_200dp"
         android:layout_height="@dimen/_50dp"
         android:layout_marginTop="@dimen/_32dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/icon_long" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/_74"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Looking For A Hotel"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/_75"
         android:layout_width="@dimen/_200dp"
         android:layout_height="wrap_content"
         android:text="Let us help you to have a memorable homes"
@@ -41,10 +41,10 @@
         android:textSize="@dimen/_text_16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/_74" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/_76"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_50dp"
         android:layout_marginStart="@dimen/_32dp"
@@ -52,12 +52,12 @@
         android:layout_marginBottom="@dimen/_8dp"
         android:background="@drawable/radius_white_all"
         android:text="GET STARTED"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/_77"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button3"
+        android:id="@+id/_77"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_50dp"
         android:layout_marginStart="@dimen/_32dp"

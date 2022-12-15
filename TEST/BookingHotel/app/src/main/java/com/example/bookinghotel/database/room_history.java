@@ -1,4 +1,4 @@
-package com.example.bookinghotel.adapter;
+package com.example.bookinghotel.database;
 
 public class room_history {
     private int imgRoomHistory;

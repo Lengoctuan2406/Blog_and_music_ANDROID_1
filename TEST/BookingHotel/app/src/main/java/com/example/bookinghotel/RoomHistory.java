@@ -12,18 +12,19 @@ import com.example.bookinghotel.adapter.MyRoomHistoryAdapter;
 import com.google.android.material.tabs.TabLayout;
 
 public class RoomHistory extends AppCompatActivity {
-
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     MyRoomHistoryAdapter myRoomHistoryAdapter;
-    ImageView icon_arrowback_RoomHostory;
+    ImageView _106;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_history);
-        icon_arrowback_RoomHostory = findViewById(R.id.icon_arrowback_RoomHostory);
-        icon_arrowback_RoomHostory.setOnClickListener(new View.OnClickListener() {
+    public void findViewById() {
+        _106 = findViewById(R.id._106);
+        tabLayout = findViewById(R.id.tablayout_roomHistory);
+        viewPager2 = findViewById(R.id.viewPager_roomHistory);
+    }
+
+    public void setOnClickListener() {
+        _106.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(RoomHistory.this, MainActivity.class);
@@ -31,9 +32,9 @@ public class RoomHistory extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
 
-        tabLayout = findViewById(R.id.tablayout_roomHistory);
-        viewPager2 = findViewById(R.id.viewPager_roomHistory);
+    public void others() {
         myRoomHistoryAdapter = new MyRoomHistoryAdapter(this);
         viewPager2.setAdapter(myRoomHistoryAdapter);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -41,12 +42,10 @@ public class RoomHistory extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager2.setCurrentItem(tab.getPosition());
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
@@ -59,13 +58,14 @@ public class RoomHistory extends AppCompatActivity {
                 tabLayout.getTabAt(position).select();
             }
         });
+    }
 
-
-
-
-
-
-
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_room_history);
+        findViewById();
+        setOnClickListener();
+        others();
     }
 }

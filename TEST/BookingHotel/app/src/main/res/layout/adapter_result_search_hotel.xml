@@ -21,7 +21,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/img_list_resultHotel"
+                android:id="@+id/_143"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200dp"
                 android:scaleType="centerCrop"
@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtprice_list_resultHotel"
+                android:id="@+id/_144"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -42,9 +42,9 @@
                 android:textSize="40dp"
                 android:layout_marginEnd="@dimen/_60dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/price_list_resultHotel"/>
+                app:layout_constraintEnd_toEndOf="@+id/_145"/>
             <TextView
-                android:id="@+id/price_list_resultHotel"
+                android:id="@+id/_145"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -54,11 +54,11 @@
                 android:textSize="40dp"
                 android:layout_marginEnd="@dimen/_5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/img_list_resultHotel"/>
+                app:layout_constraintEnd_toEndOf="@+id/_143"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/name_list_resultHotel"
+            android:id="@+id/_146"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10dp"
@@ -68,7 +68,7 @@
             android:textStyle="bold"/>
         <!--        TYPE ROOM-->
         <TextView
-            android:id="@+id/typeRoom_list_resultHotel"
+            android:id="@+id/_147"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotoregular"
@@ -77,7 +77,7 @@
             android:textSize="@dimen/_text_16sp"/>
         <!--        STAY DATE-->
         <TextView
-            android:id="@+id/stay_list_resultHotel"
+            android:id="@+id/_148"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/robotobold"

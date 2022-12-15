@@ -9,45 +9,31 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bookinghotel.adapter.blog;
+import com.example.bookinghotel.database.blog;
 
 public class BlogDetail extends AppCompatActivity {
-    //
-//    TextView body_des_blog;
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_blog_detail);
-//
-//        body_des_blog = findViewById(R.id.body_des_blog);
-//        body_des_blog.setText("This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An" +
-//                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\n" +
-//                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
-//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...");
-    TextView body_des_blog, nameBlog, addressBlog;
-    ImageView imgBlog, icon_arrowback_blogFragment;
-    blog blog;
-    Button btn_des_blog;
+    TextView _13, _9, _11;
+    ImageView _7, _1;
+    Button _14;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blog_detail);
+    public void findViewById() {
+        _14 = findViewById(R.id._14);
+        _1 = findViewById(R.id._1);
+        _13 = findViewById(R.id._13);
+        _9 = findViewById(R.id._9);
+        _11 = findViewById(R.id._11);
+        _7 = findViewById(R.id._7);
+    }
 
-        btn_des_blog = findViewById(R.id.btn_des_blog);
-        btn_des_blog.setOnClickListener(new View.OnClickListener() {
+    public void setOnClickListener() {
+        _14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(BlogDetail.this, Searching.class);
                 startActivity(i);
             }
         });
-
-        icon_arrowback_blogFragment = findViewById(R.id.icon_arrowback_blogFragment);
-        icon_arrowback_blogFragment.setOnClickListener(new View.OnClickListener() {
+        _1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(BlogDetail.this, MainActivity.class);
@@ -55,18 +41,22 @@ public class BlogDetail extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
-        body_des_blog = findViewById(R.id.body_des_blog);
-        nameBlog = findViewById(R.id.name_des_blog);
-        addressBlog = findViewById(R.id.address_des_blog);
-        imgBlog = findViewById(R.id.img_des_blog);
-
-        nameBlog.setText(getIntent().getExtras().getString("name"));
-        addressBlog.setText(getIntent().getExtras().getString("address"));
-        body_des_blog.setText(getIntent().getExtras().getString("des"));
-        int imgDes = getIntent().getIntExtra("img", 0);
-        imgBlog.setImageResource(imgDes);
     }
 
+    public void others() {
+        _9.setText(getIntent().getExtras().getString("name"));
+        _11.setText(getIntent().getExtras().getString("address"));
+        _13.setText(getIntent().getExtras().getString("des"));
+        int imgDes = getIntent().getIntExtra("img", 0);
+        _7.setImageResource(imgDes);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_blog_detail);
+        findViewById();
+        setOnClickListener();
+        others();
+    }
 }

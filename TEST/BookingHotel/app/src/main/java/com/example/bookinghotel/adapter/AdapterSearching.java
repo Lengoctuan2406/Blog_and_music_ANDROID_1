@@ -8,13 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.bookinghotel.BlogDetail;
 import com.example.bookinghotel.DetailRoom;
 import com.example.bookinghotel.R;
+import com.example.bookinghotel.database.room_history;
 
 import java.util.List;
 
@@ -26,6 +25,30 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
         this.searchModel = searchModel;
     }
 
+    @Override
+    public int getItemCount() {
+        if(searchModel != null) {
+            return searchModel.size();
+        }
+        return 0;
+    }
+
+    public class ListSearch extends RecyclerView.ViewHolder {
+        private ImageView _143;
+        private TextView _145, _146, _147, _148;
+        private CardView adapterLayout_list_resultHotel;
+
+        public ListSearch(@NonNull View itemView) {
+            super(itemView);
+            _143 = itemView.findViewById(R.id._143);
+            _146 = itemView.findViewById(R.id._146);
+            _145 = itemView.findViewById(R.id._145);
+            _147 = itemView.findViewById(R.id._147);
+            _148 = itemView.findViewById(R.id._148);
+            adapterLayout_list_resultHotel = itemView.findViewById(R.id.adapterLayout_list_resultHotel);
+        }
+    }
+    
     @NonNull
     @Override
     public AdapterSearching.ListSearch onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -39,12 +62,11 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
         if (room_history_1 == null) {
             return;
         }
-        holder.img_roomSaved.setImageResource(room_history_1.getImgRoomHistory());
-        holder.nameHotel.setText(room_history_1.getNameHotelHistory());
-//        holder.priceRoom.setText(room_history_1.getPriceRoomHistory());
-        holder.priceRoom.setText(String.valueOf(room_history_1.getPriceRoomHistory()));
-        holder.stayDate.setText(room_history_1.getStayDate());
-        holder.typeRoom.setText(room_history_1.getTypeRoomHistory());
+        holder._143.setImageResource(room_history_1.getImgRoomHistory());
+        holder._146.setText(room_history_1.getNameHotelHistory());
+        holder._145.setText(String.valueOf(room_history_1.getPriceRoomHistory()));
+        holder._148.setText(room_history_1.getStayDate());
+        holder._147.setText(room_history_1.getTypeRoomHistory());
         holder.adapterLayout_list_resultHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,30 +74,5 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
                 v.getContext().startActivity(i);
             }
         });
-    }
-
-    @Override
-    public int getItemCount() {
-        if(searchModel != null) {
-            return searchModel.size();
-        }
-        return 0;
-    }
-
-    public class ListSearch extends RecyclerView.ViewHolder {
-        private ImageView img_roomSaved;
-        private TextView priceRoom, nameHotel, typeRoom, stayDate;
-        private CardView adapterLayout_list_resultHotel;
-
-        public ListSearch(@NonNull View itemView) {
-            super(itemView);
-
-            img_roomSaved = itemView.findViewById(R.id.img_list_resultHotel);
-            nameHotel = itemView.findViewById(R.id.name_list_resultHotel);
-            priceRoom = itemView.findViewById(R.id.price_list_resultHotel);
-            typeRoom = itemView.findViewById(R.id.typeRoom_list_resultHotel);
-            stayDate = itemView.findViewById(R.id.stay_list_resultHotel);
-            adapterLayout_list_resultHotel = itemView.findViewById(R.id.adapterLayout_list_resultHotel);
-        }
     }
 }

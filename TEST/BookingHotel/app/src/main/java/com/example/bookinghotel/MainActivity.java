@@ -20,34 +20,12 @@ public class MainActivity extends AppCompatActivity {
     AccountFragment accountFragment = new AccountFragment();
     SavedFragment savedFragment = new SavedFragment();
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-
+    public void findViewById() {
         bottomNavigationView = findViewById(R.id.bottom_nav);
-        Intent intent = getIntent();
-        int fragment = intent.getIntExtra("fragment", 0);
-        if(fragment == 1){
-            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
-            bottomNavigationView.getMenu().getItem(0).setChecked(true);
-        } else if (fragment == 2){
-            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, savedFragment).commit();
-            bottomNavigationView.getMenu().getItem(1).setChecked(true);
-        } else if (fragment == 3){
-            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, blogFragment).commit();
-            bottomNavigationView.getMenu().getItem(2).setChecked(true);
-        } else if (fragment == 4){
-            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, accountFragment).commit();
-            bottomNavigationView.getMenu().getItem(3).setChecked(true);
-        } else {
-            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
-            bottomNavigationView.getMenu().getItem(0).setChecked(true);
-        }
-        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+    }
 
+    public void setOnClickListener() {
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 if(item.getItemId() == R.id.menu_icon_home){
@@ -67,5 +45,35 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void others() {
+        Intent intent = getIntent();
+        int fragment = intent.getIntExtra("fragment", 0);
+        if(fragment == 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
+            bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        } else if (fragment == 2){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, savedFragment).commit();
+            bottomNavigationView.getMenu().getItem(1).setChecked(true);
+        } else if (fragment == 3){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, blogFragment).commit();
+            bottomNavigationView.getMenu().getItem(2).setChecked(true);
+        } else if (fragment == 4){
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, accountFragment).commit();
+            bottomNavigationView.getMenu().getItem(3).setChecked(true);
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.framelayout, homeFragment).commit();
+            bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        findViewById();
+        others();
+        setOnClickListener();
     }
 }

@@ -11,19 +11,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.Searching;
-import com.example.bookinghotel.YourAccount;
 
 public class SavedFragment extends Fragment {
-
     Button button;
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        button = (Button) view.findViewById(R.id.button);
+        button = (Button) view.findViewById(R.id._195);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
