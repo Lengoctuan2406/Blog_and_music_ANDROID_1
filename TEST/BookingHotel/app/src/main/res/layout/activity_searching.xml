@@ -21,8 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_30dp"
-        android:text="Search"
         android:fontFamily="@font/robotoregular"
+        android:text="Search"
         android:textSize="@dimen/_text_24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,32 +31,39 @@
 
     <EditText
         android:id="@+id/_109"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="@dimen/_50dp"
-        android:layout_marginStart="@dimen/_20dp"
-        android:layout_marginTop="@dimen/_80dp"
-        android:layout_marginEnd="@dimen/_20dp"
-        android:background="@drawable/radius_white_all"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/radius_white_left_all"
         android:drawableStart="@drawable/icon_search"
         android:drawablePadding="@dimen/_16dp"
         android:hint="Searching"
-        android:textColor="@color/FF444444"
         android:paddingStart="@dimen/_24dp"
         android:paddingEnd="@dimen/_5dp"
+        android:textColor="@color/FF444444"
         android:textSize="@dimen/_text_16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/_110"
-        android:layout_marginTop="@dimen/_150dp"
-        android:layout_marginStart="@dimen/_20dp"
-        android:layout_marginEnd="@dimen/_20dp"
-        android:layout_marginBottom="@dimen/_30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_150dp"
+        android:layout_marginEnd="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_30dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/_197"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/radius_blue_right_all"
+        android:text="Search"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/_109"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

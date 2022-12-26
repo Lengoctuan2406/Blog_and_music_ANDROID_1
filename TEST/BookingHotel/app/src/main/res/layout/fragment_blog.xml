@@ -9,12 +9,11 @@
 
     <EditText
         android:id="@+id/_193"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="@dimen/_50dp"
-        android:layout_marginStart="@dimen/_20dp"
-        android:layout_marginTop="@dimen/_32dp"
-        android:layout_marginEnd="@dimen/_20dp"
-        android:background="@drawable/radius_white_all"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/radius_white_left_all"
         android:drawableStart="@drawable/icon_search"
         android:drawablePadding="@dimen/_16dp"
         android:hint="Searching"
@@ -22,8 +21,6 @@
         android:paddingEnd="@dimen/_5dp"
         android:textColor="@color/FF444444"
         android:textSize="@dimen/_text_16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,5 +48,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/_75"></androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="90dp"
+        android:layout_height="@dimen/_50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/radius_blue_right_all"
+        android:gravity="center"
+        android:text="Search"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/_193"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

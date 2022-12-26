@@ -23,6 +23,7 @@ public class LogIn extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(LogIn.this, MainActivity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
             }
         });
         _84.setOnClickListener(new View.OnClickListener() {

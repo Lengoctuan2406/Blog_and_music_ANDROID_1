@@ -33,34 +33,18 @@
     <!--  NAME  -->
 
     <!--    text name customer-->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/_126"
-        android:layout_width="@dimen/_150dp"
-        android:layout_height="@dimen/_0dp"
-        android:layout_gravity="right"
-        android:layout_marginStart="@dimen/_16dp"
-        android:layout_marginTop="@dimen/_80dp"
-        android:background="@drawable/radius_white_all_ff1a6a77"
-        android:text="Change avatar"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_text_12sp"
-        app:cornerRadius="@dimen/_20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/_127"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
-        android:layout_marginTop="@dimen/_32dp"
+        android:layout_marginTop="140dp"
         android:fontFamily="@font/robotobold"
         android:text="Name"
         android:textSize="@dimen/_20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_126" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--  BIRTHDAY  -->
 
@@ -71,7 +55,7 @@
         android:layout_width="@dimen/_0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_32dp"
-        android:layout_marginTop="@dimen/_24dp"
+        android:layout_marginTop="135dp"
         android:layout_marginEnd="@dimen/_16dp"
         android:ems="12"
         android:fontFamily="@font/robotoregular"
@@ -82,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/_127"
-        app:layout_constraintTop_toBottomOf="@+id/_126" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/_129"
@@ -230,7 +214,7 @@
         android:layout_gravity="right"
         android:layout_marginStart="@dimen/_16dp"
         android:layout_marginTop="@dimen/_32dp"
-        android:background="@drawable/radius_white_all_ff138711"
+        android:background="@drawable/radius_blue_all"
         android:text="Save"
         android:textColor="@color/white"
         android:textSize="@dimen/_text_12sp"

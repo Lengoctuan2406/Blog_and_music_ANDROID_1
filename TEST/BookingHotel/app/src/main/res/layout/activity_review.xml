@@ -71,12 +71,11 @@
 
     <EditText
         android:id="@+id/_105"
-        android:layout_width="match_parent"
+        android:layout_width="230dp"
         android:layout_height="48dp"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:background="@drawable/radius_white_all"
+        android:background="@drawable/radius_white_left_all"
         android:drawablePadding="@dimen/_16dp"
         android:hint="Enter comment"
         android:paddingStart="@dimen/_24dp"
@@ -84,7 +83,17 @@
         android:textColor="@color/FF444444"
         android:textSize="@dimen/_text_16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/_196"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/radius_black_right_all"
+        android:text="Sent"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/_105" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

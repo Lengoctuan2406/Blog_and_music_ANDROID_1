@@ -32,6 +32,7 @@ public class Searching extends AppCompatActivity {
                 Intent i = new Intent(Searching.this, MainActivity.class);
                 i.putExtra("fragment", 1);
                 startActivity(i);
+                overridePendingTransition(R.anim._1_slide_center_to_right, R.anim._1_slide_left_to_center);
             }
         });
     }

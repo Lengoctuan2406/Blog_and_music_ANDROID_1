@@ -20,14 +20,13 @@ import java.util.List;
 public class DetailRoom extends AppCompatActivity {
     ViewFlipper viewFlipper;
     TextView _70;
-    ImageView _33, _51;
+    ImageView _51;
     Button _72;
 
     public void findViewById() {
         _70 = findViewById(R.id._70);
         _51 = findViewById(R.id._51);
         _72 = findViewById(R.id._72);
-        _33 = findViewById(R.id._33);
         viewFlipper = findViewById(R.id._17);
     }
 
@@ -53,13 +52,6 @@ public class DetailRoom extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        _33.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(DetailRoom.this, SeePictures.class);
-                startActivity(i);
-            }
-        });
     }
 
     public void others() {
@@ -79,8 +71,8 @@ public class DetailRoom extends AppCompatActivity {
         viewFlipper.setFlipInterval(3000);
         viewFlipper.setAutoStart(true);
 
-        Animation slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_right);
-        Animation slide_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_out_right);
+        Animation slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim._1_slide_left_to_center);
+        Animation slide_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim._1_slide_center_to_right);
         viewFlipper.setInAnimation(slide_in);
         viewFlipper.setOutAnimation(slide_out);
     }

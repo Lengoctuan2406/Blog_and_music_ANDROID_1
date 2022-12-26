@@ -25,38 +25,33 @@ Table hotels {
   	picture_2 varchar
   	picture_3 varchar
 	hotel_details_id varchar
+	number_days_of_stay_id varchar
 	star int
-	//date_start (ngày bắt đầu)
-	//date_end (ngày kết thúc)
+	saved_id varchar //lưu lại xem sau
 }
 
-Table hotel_details {
+Table number_days_of_stay { //số ngày ở lại
+  	number_days_of_stay_id varchar pk
+  
+	description varchar //Mô tả, ví dụ 1N-1D
+	description_number int //Mô tả dạng số
+}
+
+Table hotel_details { //trang Choose your stay
   	hotel_details_id varchar pk
   
-  	type_of_room_id varchar
-	description_type_of_room varchar
-	description varchar
-	price float (dạng dollars)
+  	number_of_room_id varchar
+
+	size varchar //độ rộng của phòng
+	description varchar //tự nhập(cho bao nhiêu người, còn gì khác)
+	price float (dạng dollars) (tự cho)
 	status varchar
 }
 
-Table types_of_room {
-  	type_of_room_id varchar pk
+Table number_of_room {
+  	number_of_room_id varchar pk
 
-  	type_of_room varchar //có thể Double room, Single room, Tripper room
-}
-
-Table rela_hotels_services {
-  	hotels_services_id varchar pk
-
-  	hotel_id varchar
-  	service_id varchar
-}
-
-Table services {
-  	id varchar pk //có thể có Free Wifi,...
-  
-  	service_name varchar
+  	description varchar //có thể Double room, Single room, Tripper room
 }
 
 Table comments {
@@ -65,8 +60,9 @@ Table comments {
   	hotel_id varchar
   	blog_id varchar
 	user_id varchar
+
   	content varchar
-  	status varchar
+    status varchar//0 là đang duyệt, 1 là đã duyệt
 }
 
 Table orders {
@@ -74,22 +70,22 @@ Table orders {
   
 	user_id varchar
   	hotel_id varchar
-  	status varchar
+	hotel_details_id varchar
+	
+	date_start (ngày bắt đầu)//cài cứng ngày bắt đầu và ngày kết thúc
+	date_end (ngày kết thúc)
+  	status varchar//0 là đang duyệt, 1 là trong giai đoạn, 2 là kết thúc
 }
 
 Table blogs {
   	blog_id varchar pk
 
+	user_id varchar
   	title varchar
-  	content varchar
+  	content varchar//chữ dài
   	picture varchar
 	country_id varchar
-  	status varchar
-
-  	created_by varchar
-  	date_entered datetime
-  	date_modified datetime
-  	deleted int
+  	status varchar//0 là đang duyệt, 1 là đã duyệt
 }
 
 Table countries {
@@ -102,5 +98,24 @@ Table saved {
   	saved_id varchar pk
 
 	user_id varchar
-	hotel_id varchar
+	status varchar//0 là chưa like, 1 là đã like
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

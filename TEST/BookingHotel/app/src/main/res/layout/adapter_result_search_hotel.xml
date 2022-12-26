@@ -62,29 +62,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10dp"
-            android:text="Name's hotel"
+            android:layout_marginEnd="@dimen/_10dp"
             android:fontFamily="@font/robotobold"
+            android:text="Name's hotel"
             android:textSize="@dimen/_18dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
         <!--        TYPE ROOM-->
         <TextView
             android:id="@+id/_147"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/robotoregular"
             android:layout_marginStart="10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:fontFamily="@font/robotoregular"
             android:text="Type Room"
-            android:textSize="@dimen/_text_16sp"/>
+            android:textSize="@dimen/_text_16sp" />
         <!--        STAY DATE-->
         <TextView
             android:id="@+id/_148"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/robotobold"
             android:layout_marginStart="@dimen/_10dp"
-            android:text="2N - 1D"
+            android:layout_marginEnd="@dimen/_10dp"
             android:layout_marginBottom="@dimen/_10dp"
-            android:textSize="@dimen/_text_16sp"/>
+            android:fontFamily="@font/robotobold"
+            android:text="2N - 1D"
+            android:textSize="@dimen/_text_16sp" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
