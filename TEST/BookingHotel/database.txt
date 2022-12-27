@@ -27,12 +27,14 @@ Table hotels {
 	hotel_details_id varchar
 	number_days_of_stay_id varchar
 	star int
-	saved_id varchar //lưu lại xem sau
+
+	user_id varchar
+	status varchar//0 là chưa like, 1 là đã like
 }
 
 Table number_days_of_stay { //số ngày ở lại
   	number_days_of_stay_id varchar pk
-  
+
 	description varchar //Mô tả, ví dụ 1N-1D
 	description_number int //Mô tả dạng số
 }
@@ -44,7 +46,7 @@ Table hotel_details { //trang Choose your stay
 
 	size varchar //độ rộng của phòng
 	description varchar //tự nhập(cho bao nhiêu người, còn gì khác)
-	price float (dạng dollars) (tự cho)
+	price int (dạng dollars) (tự cho)
 	status varchar
 }
 
@@ -58,15 +60,15 @@ Table comments {
   	comments_id varchar pk
   
   	hotel_id varchar
-  	blog_id varchar
+  	//blog_id varchar
 	user_id varchar
 
   	content varchar
-    status varchar//0 là đang duyệt, 1 là đã duyệt
+    	//status varchar//0 là đang duyệt, 1 là đã duyệt
 }
 
 Table orders {
-  	other_id varchar pk
+  	order_id varchar pk
   
 	user_id varchar
   	hotel_id varchar
@@ -74,6 +76,7 @@ Table orders {
 	
 	date_start (ngày bắt đầu)//cài cứng ngày bắt đầu và ngày kết thúc
 	date_end (ngày kết thúc)
+
   	status varchar//0 là đang duyệt, 1 là trong giai đoạn, 2 là kết thúc
 }
 
@@ -94,14 +97,10 @@ Table countries {
 	country_name varchar
 }
 
-Table saved {
-  	saved_id varchar pk
-
+Table likes {
+	like_id varchar
 	user_id varchar
-	status varchar//0 là chưa like, 1 là đã like
 }
-
-
 
 
 
