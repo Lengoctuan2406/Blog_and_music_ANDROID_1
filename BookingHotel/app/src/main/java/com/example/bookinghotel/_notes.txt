@@ -1,0 +1,62 @@
+_200: da xong
+
+//    private ItemClickListener itemClickListener;
+
+    //    public AdapterBlog(List<blog> blogModel, ItemClickListener itemClickListener) {
+//
+//        this.blogModel = blogModel;
+//        this.itemClickListener = itemClickListener;
+//    }
+
+//        intent recyclerview
+//        holder.itemView.setOnClickListener(view -> {
+//            itemClickListener.onItemClick(blogList.get(position));
+//        });
+
+//        intent recyclerview
+//    public interface ItemClickListener {
+//        void onItemClick(blog blog);
+//    }
+
+
+//    TextView body_des_blog;
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_blog_detail);
+//
+//        body_des_blog = findViewById(R.id.body_des_blog);
+//        body_des_blog.setText("This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An" +
+//                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\n" +
+//                "This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...\\n\" +\n" +
+//                "                \"This is a very famous drink shop in Hoi An. Tourists usually visit at least once when coming to Hoi An...");
+
+
+blog blog;
+
+//        AdapterBlog adapter_list_blog = new AdapterBlog(getListRoom_Doing());
+//        recyclerView_doing.setAdapter(adapter_list_blog);
+
+androidx.appcompat.widget.AppCompatButton
+
+overridePendingTransition(R.anim._4_slide_center_to_top, R.anim._4_slide_bottom_to_center);
+
+
+
+editTextTextPersonName4
+
+
+
+
+
+
+
+
+
+
+
+
+

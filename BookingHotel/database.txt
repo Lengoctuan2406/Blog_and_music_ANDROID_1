@@ -1,0 +1,92 @@
+Table users {
+  	user_id varchar pk
+  
+  	name_client varchar
+  	email_client varchar
+  	password_client varchar
+  	date_of_birth_client datetime
+  	gender_client varchar
+  	phone_client varchar
+  	avatar_client varchar
+  	facebook_client varchar
+  	instagram_client varchar
+
+  	role_client varchar
+}
+
+Table hotels {
+  	hotel_id varchar pk
+
+  	name_hotel varchar
+  	description_hotel varchar
+	picture_hotel varchar
+	country_id varchar
+	address_hotel varchar  	
+	hotel_details_id varchar	
+	star_hotel int
+	like_id varchar
+}
+
+Table likes {
+	like_id varchar
+	user_id varchar
+}
+
+Table hotel_details { //trang Choose your stay
+  	hotel_details_id varchar pk
+  
+  	number_of_room_hotel_detail varchar //có thể Double room, Single room, Tripper room
+
+	size_hotel_detail varchar //độ rộng của phòng
+	description_hotel_detail varchar //tự nhập(cho bao nhiêu người, còn gì khác)
+	price_hotel_detail int (dạng dollars) (tự cho)
+	status_hotel_detail varchar
+	picture_1_hotel_detail varchar
+  	picture_2_hotel_detail varchar
+  	picture_3_hotel_detail varchar
+}
+
+Table comments {
+  	comments_id varchar pk
+  
+  	hotel_id varchar
+	user_id varchar
+
+  	content_comments varchar
+}
+
+Table orders {
+  	order_id varchar pk  
+	user_id varchar
+  	hotel_id varchar
+	hotel_details_id varchar	
+	date_start_order (ngày bắt đầu)//cài cứng ngày bắt đầu và ngày kết thúc
+	date_end_order (ngày kết thúc)
+  	status_order varchar//0 là đang duyệt, 1 là trong giai đoạn, 2 là kết thúc
+}
+
+Table blogs {
+  	blog_id varchar pk
+
+  	title_blog varchar
+  	content_blog varchar
+  	picture_blog varchar
+	country_id varchar
+}
+
+Table countries {
+  	country_id varchar pk
+
+	country_name varchar
+}
+
+
+
+
+
+
+
+
+
+
+
