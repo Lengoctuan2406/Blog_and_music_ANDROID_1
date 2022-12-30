@@ -8,7 +8,7 @@ public class _5_table {
     public String name_client; //2
     public String email_client; //3
     public String password_client; //4
-    public Date date_of_birth_client; //5
+    public String date_of_birth_client; //5
     public String gender_client; //6
     public String phone_client; //7
     public int avatar_client; //8
@@ -34,8 +34,8 @@ public class _5_table {
     public String comments_id; //28
     public String content_comments; //29
     public String order_id; //30
-    public Date date_start_order; //31
-    public Date date_end_order; //32
+    public String date_start_order; //31
+    public String date_end_order; //32
     public String status_order; //33
     public String blog_id; //34
     public String title_blog; //35

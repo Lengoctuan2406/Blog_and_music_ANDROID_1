@@ -2,7 +2,9 @@ package com.example.bookinghotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -12,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bookinghotel.database.DatabaseHandler;
-import com.example.bookinghotel.database._6_table;
+import com.example.bookinghotel.database._0_users;
 
 public class LogIn extends AppCompatActivity {
     EditText _81, _82;
@@ -31,13 +33,18 @@ public class LogIn extends AppCompatActivity {
         _83.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                _6_table user = db.checkAccount(_81.getText().toString(), _82.getText().toString());
+                _0_users user = db.checkAccount(_81.getText().toString(), _82.getText().toString());
                 if(user.user_id != "" && user.name_client != "") {
+                    db.logIn(user);
+                    Toast toast = Toast.makeText(getApplicationContext(), "Log in successfully!", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER,0,0);
+                    toast.show();
+                    //chuyển màn hình
                     Intent i = new Intent(LogIn.this, MainActivity.class);
                     startActivity(i);
                     overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
                 } else {
-                    Toast toast = Toast.makeText(getApplicationContext(), "Ví dụ về Toast", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(getApplicationContext(), "Incorrect account or password!", Toast.LENGTH_LONG);
                     toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
                     toast.show();
                 }

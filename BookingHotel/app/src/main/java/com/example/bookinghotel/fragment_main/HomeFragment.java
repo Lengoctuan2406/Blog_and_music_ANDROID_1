@@ -11,16 +11,21 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.Searching;
 import com.example.bookinghotel.adapter.AdapterHotel;
 import com.example.bookinghotel.adapter.AdapterSearching;
+import com.example.bookinghotel.database.DatabaseHandler;
+import com.example.bookinghotel.database._0_users;
 import com.example.bookinghotel.database._1_table;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
@@ -32,11 +37,14 @@ public class HomeFragment extends Fragment {
     RecyclerView _200;
     Button _195;
     EditText editTextTextPersonName4;
+    ImageView image5;
+    DatabaseHandler db = new DatabaseHandler(getActivity());
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //findViewById
+        image5 = view.findViewById(R.id.image5);
         _195 = (Button) view.findViewById(R.id._195);
         _200 = (RecyclerView) view.findViewById(R.id.rcv_tophotel);
         editTextTextPersonName4 = (EditText) view.findViewById(R.id.editTextTextPersonName4);
@@ -53,6 +61,11 @@ public class HomeFragment extends Fragment {
         //------------------
 
         //others
+        //_0_users user = db.getUser("1");
+        //image5.setImageResource(user.avatar_client);
+//        Toast toast = Toast.makeText(getActivity(), user.avatar_client, Toast.LENGTH_LONG);
+//        toast.setGravity(Gravity.TOP | Gravity.CENTER,0,0);
+//        toast.show();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         _200.setLayoutManager(linearLayoutManager);

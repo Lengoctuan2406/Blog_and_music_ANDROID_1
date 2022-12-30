@@ -1,83 +1,84 @@
 Table users {
-  	user_id varchar pk
+  	user_id TEXT pk
   
-  	name_client varchar
-  	email_client varchar
-  	password_client varchar
-  	date_of_birth_client datetime
-  	gender_client varchar
-  	phone_client varchar
-  	avatar_client varchar
-  	facebook_client varchar
-  	instagram_client varchar
+  	name_client TEXT
+  	email_client TEXT
+  	password_client TEXT
+  	date_of_birth_client TEXT
+  	gender_client TEXT
+  	phone_client TEXT
+  	avatar_client INTEGER
+  	facebook_client TEXT
+  	instagram_client TEXT
 
-  	role_client varchar
+  	role_client TEXT
 }
 
 Table hotels {
-  	hotel_id varchar pk
+  	hotel_id TEXT pk
 
-  	name_hotel varchar
-  	description_hotel varchar
-	picture_hotel varchar
-	country_id varchar
-	address_hotel varchar  	
-	hotel_details_id varchar	
-	star_hotel int
-	like_id varchar
+  	name_hotel TEXT
+  	description_hotel TEXT
+	picture_hotel INTEGER
+	country_id TEXT
+	address_hotel TEXT	
+	star_hotel INTEGER
+	like_id TEXT
 }
 
 Table likes {
-	like_id varchar
-	user_id varchar
+	like_id TEXT
+	user_id TEXT
 }
 
 Table hotel_details { //trang Choose your stay
-  	hotel_details_id varchar pk
+  	hotel_details_id TEXT pk
   
-  	number_of_room_hotel_detail varchar //có thể Double room, Single room, Tripper room
+	hotel_id TEXT
+	
+  	number_of_room_hotel_detail TEXT //có thể Double room, Single room, Tripper room
 
-	size_hotel_detail varchar //độ rộng của phòng
-	description_hotel_detail varchar //tự nhập(cho bao nhiêu người, còn gì khác)
-	price_hotel_detail int (dạng dollars) (tự cho)
-	status_hotel_detail varchar
-	picture_1_hotel_detail varchar
-  	picture_2_hotel_detail varchar
-  	picture_3_hotel_detail varchar
+	size_hotel_detail TEXT //độ rộng của phòng
+	description_hotel_detail TEXT //tự nhập(cho bao nhiêu người, còn gì khác)
+	price_hotel_detail INTEGER (dạng dollars) (tự cho)
+	status_hotel_detail INTEGER
+	picture_1_hotel_detail INTEGER
+  	picture_2_hotel_detail INTEGER
+  	picture_3_hotel_detail INTEGER
 }
 
 Table comments {
-  	comments_id varchar pk
+  	comments_id TEXT pk
   
-  	hotel_id varchar
-	user_id varchar
+  	hotel_id TEXT
+	user_id TEXT
 
-  	content_comments varchar
+  	content_comments TEXT
 }
 
 Table orders {
-  	order_id varchar pk  
-	user_id varchar
-  	hotel_id varchar
-	hotel_details_id varchar	
-	date_start_order (ngày bắt đầu)//cài cứng ngày bắt đầu và ngày kết thúc
-	date_end_order (ngày kết thúc)
-  	status_order varchar//0 là đang duyệt, 1 là trong giai đoạn, 2 là kết thúc
+  	order_id TEXT pk  
+	user_id TEXT
+  	hotel_id TEXT
+	hotel_details_id TEXT
+	date_start_order DATE(ngày bắt đầu)//cài cứng ngày bắt đầu và ngày kết thúc
+	date_end_order DATE(ngày kết thúc)
+  	status_order INTEGER//0 là đang duyệt, 1 là trong giai đoạn, 2 là kết thúc
 }
 
 Table blogs {
-  	blog_id varchar pk
+  	blog_id TEXT pk
 
-  	title_blog varchar
-  	content_blog varchar
-  	picture_blog varchar
-	country_id varchar
+  	title_blog TEXT
+  	content_blog TEXT
+  	picture_blog INTEGER
+	country_id TEXT
 }
 
 Table countries {
-  	country_id varchar pk
+  	country_id TEXT pk
 
-	country_name varchar
+	country_name TEXT
 }
 
 

@@ -95,6 +95,98 @@ session.invalidate();
 //    }
 
 
+//    public void addAll() {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        ContentValues values = new ContentValues();
+//        values.put("user_id", "6");
+//        values.put("name_client", "Le Ngoc Toan");
+//        values.put("email_client", "1");
+//        values.put("password_client", "2");
+//        values.put("date_of_birth_client", "2001-08-24");
+//        values.put("gender_client", "Nam");
+//        values.put("phone_client", "0983212323");
+//        values.put("avatar_client", 1);
+//        values.put("facebook_client", "");
+//        values.put("instagram_client", "");
+//        values.put("role_client", "");
+//        db.insert("users", null, values);
+//
+//        values.put("user_id", "9");
+//        values.put("name_client", "Le Ngoc Tuan");
+//        values.put("email_client", "1");
+//        values.put("password_client", "1");
+//        values.put("date_of_birth_client", "2001-06-24");
+//        values.put("gender_client", "Nam");
+//        values.put("phone_client", "0983212323");
+//        values.put("avatar_client", 1);
+//        values.put("facebook_client", "");
+//        values.put("instagram_client", "");
+//        values.put("role_client", "");
+//        db.insert("users", null, values);
+//        db.close();
+//    }
+
+String.valueOf(account.date_of_birth_client)
 
 
 
+_0_users user = db.checkAccount(_81.getText().toString(), _82.getText().toString());
+                if(user.user_id != "" && user.name_client != "") {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Đăng nhập thành công", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP | Gravity.CENTER,0,0);
+                    toast.show();
+                    Intent i = new Intent(LogIn.this, MainActivity.class);
+                    startActivity(i);
+                    overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
+                } else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Sai tài khoản hoặc mật khẩu", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                    toast.show();
+                }
+
+Random generator = new Random();
+                    String random = String.valueOf(generator.nextInt());
+
+//DatabaseHandler db = new DatabaseHandler(this);
+//db.addContact(new Contact(Name, Phone));
+
+SharedPreferences sharedPreferences = getSharedPreferences("UserInfo", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("user_id",user.user_id);
+                    editor.putString("name_client",user.name_client);
+                    editor.commit();
+
+
+
+Intent i = new Intent(v.getContext(), DetailStudent.class);
+                i.putExtra("id", studentdetail.getID());
+
+                    Intent intent = getIntent();
+                            findViewsByIds();
+                            int i = intent.getIntExtra("id", 0);
+
+String intent = requireActivity().getIntent().getStringExtra("key_name");
+
+String intent = requireActivity().getIntent().getStringExtra("user_id");
+
+//    public _0_users getUser() {
+//        _0_users user = new _0_users();
+//        String selectQuery = "SELECT * FROM users WHERE user_id='1';";
+//        SQLiteDatabase db = this.getWritableDatabase();
+//        Cursor cursor = db.rawQuery(selectQuery, null);
+//        if (cursor.moveToFirst()) {
+//            user.avatar_client = cursor.getInt(0);
+//        } else {
+//            user.avatar_client = 0;
+//        }
+//
+////        _0_users user = new _0_users();
+////        for(int i=0; i<users.size(); i++){
+////            if(users.get(i).user_id == "1") {
+////                user.user_id=users.get(i).user_id;
+////                user.avatar_client=users.get(i).avatar_client;
+////            }
+//////            System.out.println("Tên: "+listHS.get(i).ten+" Tuổi: "+listHS.get(i).tuoi);
+////        }
+//        return user;
+//    }

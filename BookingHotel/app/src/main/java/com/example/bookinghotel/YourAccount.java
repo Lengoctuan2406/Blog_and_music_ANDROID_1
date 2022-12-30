@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.bookinghotel.database.DatabaseHandler;
+import com.example.bookinghotel.database._0_users;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -18,11 +21,14 @@ import java.util.Locale;
 public class YourAccount extends AppCompatActivity {
     ImageView icon_arrowback_accountFragment;
     EditText _130;
+    TextView _125;
     Calendar calendar = Calendar.getInstance();
+    DatabaseHandler db = new DatabaseHandler(this);
 
     public void findViewById() {
         icon_arrowback_accountFragment = findViewById(R.id._124);
         _130 = (EditText) findViewById(R.id._130);
+        _125 = (TextView) findViewById(R.id._125);
     }
 
     public void setOnClickListener() {

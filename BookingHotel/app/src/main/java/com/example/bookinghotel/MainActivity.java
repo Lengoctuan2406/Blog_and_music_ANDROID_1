@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.bookinghotel.database.DatabaseHandler;
 import com.example.bookinghotel.fragment_main.AccountFragment;
 import com.example.bookinghotel.fragment_main.BlogFragment;
 import com.example.bookinghotel.fragment_main.HomeFragment;

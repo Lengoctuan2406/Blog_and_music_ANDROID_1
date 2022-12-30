@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 
 import com.example.bookinghotel.adapter.AdapterBlog;
 import com.example.bookinghotel.R;
+import com.example.bookinghotel.database.DatabaseHandler;
+import com.example.bookinghotel.database._0_blogs;
 import com.example.bookinghotel.database._4_table;
 
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class BlogFragment extends Fragment {
     RecyclerView recyclerView_listBlog;
     LinearLayout linearLayout_adapter_list_blog;
     CardView adapterLayout_list_blog;
+    DatabaseHandler db = new DatabaseHandler(getActivity());
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

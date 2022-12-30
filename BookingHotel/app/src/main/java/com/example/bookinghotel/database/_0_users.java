@@ -2,35 +2,35 @@ package com.example.bookinghotel.database;
 
 import java.util.Date;
 
-public class _6_table {
-    public String user_id; //1
-    public String name_client; //2
-    public String email_client; //3
-    public String password_client; //4
-    public Date date_of_birth_client; //5
-    public String gender_client; //6
-    public String phone_client; //7
-    public int avatar_client; //8
-    public String facebook_client; //9
-    public String instagram_client; //10
-    public String role_client; //11
-    public String hotel_id; //12
-    public String name_hotel; //13
-    public String country_id; //15
-    public String hotel_details_id; //17
-    public String like_id; //19
-    public int price_hotel_detail; //23
-    public String comments_id; //28
-    public String order_id; //30
-    public String blog_id; //34
-    public int picture_hotel; //39
+public class _0_users {
+    public String user_id;
+    public String name_client;
+    public String email_client;
+    public String password_client;
+    public String date_of_birth_client;
+    public String gender_client;
+    public String phone_client;
+    public int avatar_client;
+    public String facebook_client;
+    public String instagram_client;
+    public String role_client;
+    public String hotel_id;
+    public String name_hotel;
+    public String country_id;
+    public String hotel_details_id;
+    public String like_id;
+    public int price_hotel_detail;
+    public String comments_id;
+    public String order_id;
+    public String blog_id;
+    //public int picture_hotel;
 
-    public _6_table() {};
-    public _6_table(String _user_id, String _hotel_id, String _country_id,
+    public _0_users() {};
+    public _0_users(String _user_id, String _hotel_id, String _country_id,
                     String _hotel_details_id, String _like_id, String _comments_id,
                     String _order_id, String _blog_id,
                     String _name_client, String _email_client, String _password_client,
-                    Date _date_of_birth_client, String _gender_client,
+                    String _date_of_birth_client, String _gender_client,
                     String _phone_client, int _avatar_client, String _facebook_client,
                     String _instagram_client, String _role_client) {
         user_id = _user_id;
