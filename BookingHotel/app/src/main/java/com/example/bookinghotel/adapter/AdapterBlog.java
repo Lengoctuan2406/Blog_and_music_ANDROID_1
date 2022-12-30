@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookinghotel.BlogDetail;
 import com.example.bookinghotel.R;
-import com.example.bookinghotel.database.blog;
+import com.example.bookinghotel.database._4_table;
 
 import java.util.List;
 
 public class AdapterBlog extends RecyclerView.Adapter<AdapterBlog.ListBlog> {
-    private List<blog> blogList;
+    private List<_4_table> blogList;
 
-    public AdapterBlog(List<blog> blogList) {
+    public AdapterBlog(List<_4_table> blogList) {
         this.blogList = blogList;
     }
 
@@ -36,7 +36,7 @@ public class AdapterBlog extends RecyclerView.Adapter<AdapterBlog.ListBlog> {
         private ImageView _140;
         private TextView _141, _142;
         private CardView adapterLayout_list_blog;
-        private blog blog;
+        private _4_table blog;
 
         public ListBlog(@NonNull View itemView) {
             super(itemView);
@@ -57,21 +57,19 @@ public class AdapterBlog extends RecyclerView.Adapter<AdapterBlog.ListBlog> {
     @Override
     public void onBindViewHolder(@NonNull ListBlog holder, int position) {
 
-        final blog blog1 = blogList.get(position);
+        final _4_table blog1 = blogList.get(position);
         if (blog1 == null) {
             return;
         }
-        holder._140.setImageResource(blog1.getImgBlog());
-        holder._141.setText(blog1.getNameBlog());
-        holder._142.setText(blog1.getAddressBlog());
+        holder._140.setImageResource(blog1.picture_blog);
+        holder._141.setText(blog1.title_blog);
+        holder._142.setText(blog1.country_name);
         holder.adapterLayout_list_blog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), BlogDetail.class);
-                i.putExtra("img", blog1.getImgBlog());
-                i.putExtra("name", blog1.getNameBlog());
-                i.putExtra("address", blog1.getAddressBlog());
-                i.putExtra("des", blog1.getDesBlog());
+                i.putExtra("blog_id", blog1.blog_id);
+                i.putExtra("country_id", blog1.country_id);
                 v.getContext().startActivity(i);
             }
         });

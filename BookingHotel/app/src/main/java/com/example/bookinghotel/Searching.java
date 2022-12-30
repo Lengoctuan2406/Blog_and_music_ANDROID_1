@@ -47,12 +47,12 @@ public class Searching extends AppCompatActivity {
     private List<_1_table> getListSearch() {
         List<_1_table> search_models = new ArrayList<>();
 
-        search_models.add(new _1_table(R.drawable.hotelroom1, "GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Da Nang", "hotel"));
-        search_models.add(new _1_table(R.drawable.hotelroom2, "GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Hoi An", "hotel"));
-        search_models.add(new _1_table(R.drawable.hotelroom3, "GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Da Nang", "hotel"));
-        search_models.add(new _1_table(R.drawable.hotelroom1, "GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Da Nang", "hotel"));
-        search_models.add(new _1_table(R.drawable.hotelroom2, "GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Hoi An", "hotel"));
-        search_models.add(new _1_table(R.drawable.hotelroom3, "GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Da Nang", "hotel"));
+        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom1, "GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Da Nang", "hotel"));
+        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom2, "GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Hoi An", "hotel"));
+        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom3, "GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Da Nang", "hotel"));
+        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom1, "GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Da Nang", "hotel"));
+        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom2, "GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Hoi An", "hotel"));
+        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom3, "GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Da Nang", "hotel"));
 
         return search_models;
     }

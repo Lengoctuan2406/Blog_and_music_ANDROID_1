@@ -7,8 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.bookinghotel.database.DatabaseHandler;
+import com.example.bookinghotel.database._6_table;
+
+import java.sql.Date;
+
 public class GetStarted extends AppCompatActivity {
     Button _76, _77;
+    DatabaseHandler db = new DatabaseHandler(this);
 
     public void findViewById() {
         _76 = findViewById(R.id._76);
@@ -33,6 +39,7 @@ public class GetStarted extends AppCompatActivity {
     }
 
     public void others() {
+        db.addAll();
     }
 
     @Override
@@ -40,7 +47,7 @@ public class GetStarted extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
         findViewById();
-        setOnClickListener();
         others();
+        setOnClickListener();
     }
 }

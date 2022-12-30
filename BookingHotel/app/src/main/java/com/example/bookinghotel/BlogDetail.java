@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.bookinghotel.database.blog;
-
 public class BlogDetail extends AppCompatActivity {
     TextView _13, _9, _11;
     ImageView _7, _1;

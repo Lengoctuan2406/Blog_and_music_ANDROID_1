@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.bookinghotel.adapter.AdapterReview;
-import com.example.bookinghotel.database.review;
+import com.example.bookinghotel.database._5_table;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,13 +41,13 @@ public class Review extends AppCompatActivity {
         recyclerView_review.setAdapter(adapter_review);
     }
 
-    private List<review> getListReview() {
-        List<review> reviews = new ArrayList<>();
-        reviews.add(new review(1, 1, 10, "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_1, "Name customer", 0));
-        reviews.add(new review(2, 1, 10, "Comment test", R.drawable.image_customer_test, "Name customer", 0));
-        reviews.add(new review(3, 1, 10, "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_2, "Name customer", 0));
-        reviews.add(new review(4, 1, 10, "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_1, "Name customer", 0));
-        reviews.add(new review(5, 1, 10, "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_2, "Name customer", 0));
+    private List<_5_table> getListReview() {
+        List<_5_table> reviews = new ArrayList<>();
+        reviews.add(new _5_table("", "", "", "", "", "", "", "", "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_1, "Name customer"));
+        reviews.add(new _5_table("", "", "", "", "", "", "", "", "Comment test", R.drawable.image_customer_test, "Name customer"));
+        reviews.add(new _5_table("", "", "", "", "", "", "", "", "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_2, "Name customer"));
+        reviews.add(new _5_table("", "", "", "", "", "", "", "", "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_1, "Name customer"));
+        reviews.add(new _5_table("", "", "", "", "", "", "", "", "Khach san rat dep va dung nhu mo ta", R.drawable.image_customer_test_2, "Name customer"));
         return reviews;
     }
 

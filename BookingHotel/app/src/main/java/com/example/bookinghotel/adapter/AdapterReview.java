@@ -10,14 +10,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookinghotel.R;
-import com.example.bookinghotel.database.review;
+import com.example.bookinghotel.database._5_table;
 
 import java.util.List;
 
 public class AdapterReview extends RecyclerView.Adapter<AdapterReview.ListReview> {
-    private List<review> reviewsList;
+    private List<_5_table> reviewsList;
 
-    public AdapterReview(List<review> reviewsList) {
+    public AdapterReview(List<_5_table> reviewsList) {
         this.reviewsList = reviewsList;
     }
 
@@ -50,12 +50,12 @@ public class AdapterReview extends RecyclerView.Adapter<AdapterReview.ListReview
 
     @Override
     public void onBindViewHolder(@NonNull AdapterReview.ListReview holder, int position) {
-        review review = reviewsList.get(position);
+        _5_table review = reviewsList.get(position);
         if (review == null) {
             return;
         }
-        holder._150.setImageResource(review.getAvatar());
-        holder._151.setText(review.getCreate_by());
-        holder._153.setText(review.getContent());
+        holder._150.setImageResource(review.avatar_client);
+        holder._151.setText(review.name_client);
+        holder._153.setText(review.content_comments);
     }
 }

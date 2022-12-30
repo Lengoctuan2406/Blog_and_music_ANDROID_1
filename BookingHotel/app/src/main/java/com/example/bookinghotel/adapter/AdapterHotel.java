@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.database._1_table;
-import com.example.bookinghotel.database.blog;
 
 import java.util.List;
 

@@ -203,7 +203,7 @@
                 android:id="@+id/_199"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:text="Top hotels"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -211,13 +211,19 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcv_tophotel"
                 android:layout_width="match_parent"
-                android:layout_height="162dp"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.476"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textTophotel"
                 app:layout_constraintVertical_bias="0.2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="vertical"></LinearLayout>
 
         </LinearLayout>
     </ScrollView>
