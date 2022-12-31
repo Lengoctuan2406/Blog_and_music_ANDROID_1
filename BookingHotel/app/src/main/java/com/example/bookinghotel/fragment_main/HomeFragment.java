@@ -148,7 +148,7 @@ public class HomeFragment extends Fragment {
                         && editTextTextPersonName4.length() == 0
                         && editTextTextPersonName_5.length() == 0) {
                     Toast toast = Toast.makeText(getContext(), "Please enter the information you are looking for!", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 } else {
                     i.putExtra("country_name", editTextTextPersonName3.getText().toString());
@@ -168,7 +168,7 @@ public class HomeFragment extends Fragment {
                     } else if (editTextTextPersonName4.length() > 0 && editTextTextPersonName_5.length() == 0){
                         if(editTextTextPersonName4_revert.compareTo(current_day_revert) < 0) {
                             Toast toast = Toast.makeText(getContext(), "Start date cannot be less than current date!", Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
                             toast.show();
                             return;
                         }
@@ -182,7 +182,7 @@ public class HomeFragment extends Fragment {
                     } else if (editTextTextPersonName4.length() == 0 && editTextTextPersonName_5.length() > 0){
                         if(editTextTextPersonName_5_revert.compareTo(current_day_revert) < 0) {
                             Toast toast = Toast.makeText(getContext(), "End date cannot be less than the current date!", Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
                             toast.show();
                             return;
                         }
@@ -196,19 +196,19 @@ public class HomeFragment extends Fragment {
                     } else if (editTextTextPersonName4.length() > 0 && editTextTextPersonName_5.length() > 0){
                         if(editTextTextPersonName4_revert.compareTo(current_day_revert) < 0) {
                             Toast toast = Toast.makeText(getContext(), "Start date cannot be less than current date!", Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
                             toast.show();
                             return;
                         }
                         if(editTextTextPersonName_5_revert.compareTo(current_day_revert) < 0) {
                             Toast toast = Toast.makeText(getContext(), "End date cannot be less than the current date!", Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
                             toast.show();
                             return;
                         }
                         if(editTextTextPersonName_5_revert.compareTo(editTextTextPersonName4_revert) < 0) {
                             Toast toast = Toast.makeText(getContext(), "End date cannot be less than start date!", Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                            toast.setGravity(Gravity.CENTER, 0, 0);
                             toast.show();
                             return;
                         }
