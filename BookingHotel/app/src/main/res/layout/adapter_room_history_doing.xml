@@ -10,7 +10,7 @@
     <!--LinearLayout tong-->
     <LinearLayout
         android:id="@+id/linearLayout_adapter_roomHistory"
-        android:layout_width="@dimen/_0dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,28 +35,24 @@
 
             <!--            LinearLayout cua thong tin hotel-->
             <LinearLayout
-                android:id="@+id/linearLayout_adapter_InforoomHistory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginTop="@dimen/_15dp"
+                android:layout_width="150dp"
+                android:layout_height="250dp"
+                android:layout_marginLeft="5dp"
                 android:orientation="vertical">
 
-                <!--            Ten hotel-->
                 <TextView
                     android:id="@+id/_163"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
                     android:layout_marginBottom="@dimen/_10dp"
                     android:fontFamily="@font/robotobold"
                     android:text="Name's blog"
                     android:textSize="@dimen/_20dp"
                     android:textStyle="bold" />
 
-                <!--            Gia phong-->
                 <LinearLayout
                     android:id="@+id/linearLayout_adapter_PriceroomHistory"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <!--                Text gia-->
@@ -77,37 +73,37 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotobold"
-                        android:text="Ha Noi"
+                        android:text="200"
                         android:textColor="@color/FF1A6A77"
                         android:textSize="@dimen/_16dp" />
                 </LinearLayout>
 
-                <!--            LinearLayout so ngay dem-->
-                <!--So dem-->
                 <TextView
                     android:id="@+id/_166"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="@dimen/_5dp"
                     android:fontFamily="@font/robotobold"
                     android:text="1N - 2D"
                     android:textColor="@color/FF645C5C"
                     android:textSize="@dimen/_18dp" />
 
-                <!--            LinearLayout cua so phong va loai phong-->
                 <TextView
                     android:id="@+id/_167"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="@dimen/_5dp"
                     android:fontFamily="@font/robotoregular"
                     android:text="Double beds"
                     android:textColor="@color/FF645C5C" />
-                <!--            LinearLayout dia chi-->
+
                 <LinearLayout
                     android:id="@+id/linearLayout_adapter_AddressroomHistory"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                     <!--                Text address-->
@@ -122,7 +118,7 @@
                     <!--                Dia chi-->
                     <TextView
                         android:id="@+id/_169"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_10dp"
                         android:fontFamily="@font/robotoregular"
@@ -130,17 +126,40 @@
                         android:textSize="@dimen/_16dp" />
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/_170"
-                    android:layout_width="@dimen/_80dp"
-                    android:layout_height="@dimen/_40dp"
-                    android:layout_gravity="left"
-                    android:backgroundTint="@color/FF771A1A"
-                    android:text="Cancel"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_10dp"
-                    app:cornerRadius="@dimen/_10dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/button2"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/radius_black_all"
+                        android:gravity="center"
+                        android:text="See bill"
+                        android:textColor="@color/white"
+                        android:textSize="10dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/_170"
+                        android:layout_width="70dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center|left"
+                        android:background="@drawable/radius_white_all_ff771a1a"
+                        android:backgroundTint="@color/FF771A1A"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10dp"
+                        app:cornerRadius="@dimen/_10dp" />
+
+                </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

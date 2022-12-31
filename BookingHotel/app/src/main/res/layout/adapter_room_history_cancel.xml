@@ -37,18 +37,16 @@
             <!--            LinearLayout cua thong tin hotel-->
             <LinearLayout
                 android:id="@+id/linearLayout_adapter_InforoomHistory_cancel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_10dp"
-                android:layout_marginTop="@dimen/_15dp"
-                android:layout_weight="1"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
                 android:orientation="vertical">
 
                 <!--            Ten hotel-->
                 <TextView
                     android:id="@+id/_155"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
                     android:layout_marginBottom="@dimen/_10dp"
                     android:fontFamily="@font/robotobold"
                     android:text="Name's blog"
@@ -58,7 +56,7 @@
                 <!--            Gia phong-->
                 <LinearLayout
                     android:id="@+id/linearLayout_adapter_PriceroomHistory_cancel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <!--                Text gia-->
@@ -88,11 +86,11 @@
                 <!--So dem-->
                 <TextView
                     android:id="@+id/_158"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:fontFamily="@font/robotobold"
                     android:text="1N - 2D"
-                    android:layout_marginBottom="@dimen/_5dp"
                     android:textColor="@color/FF645C5C"
                     android:textSize="@dimen/_18dp" />
 
@@ -100,16 +98,16 @@
                 <!--            LinearLayout cua so phong va loai phong-->
                 <TextView
                     android:id="@+id/_159"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:fontFamily="@font/robotoregular"
                     android:text="Double beds"
-                    android:layout_marginBottom="@dimen/_5dp"
                     android:textColor="@color/FF645C5C" />
                 <!--            LinearLayout dia chi-->
                 <LinearLayout
                     android:id="@+id/linearLayout_adapter_AddressroomHistory_cancel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
@@ -133,6 +131,16 @@
                         android:textSize="@dimen/_16dp" />
 
                 </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button3"
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/radius_black_all"
+                    android:gravity="center"
+                    android:text="See bill"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
 
             </LinearLayout>
         </LinearLayout>
