@@ -46,29 +46,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS countries");
         onCreate(db);
     }
-
-    public _0_users checkAccount(String _email_client, String _password_client) {
-        _0_users account = new _0_users();
-        String selectQuery = "SELECT user_id, name_client FROM users WHERE email_client='" + _email_client + "' AND password_client='" + _password_client + "';";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        if (cursor.moveToFirst()) {
-            account.user_id = cursor.getString(0);
-            account.name_client = cursor.getString(1);
-        } else {
-            account.user_id = "";
-            account.name_client = "";
-        }
-        return account;
-    }
-    public int logIn(_0_users user) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("role_client", "login");
-        return db.update("users", values, "user_id = ?",
-                new String[]{String.valueOf(user.user_id)});
-    }
-
     public void addBlogs(_0_blogs blog) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -79,21 +56,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put("country_id", blog.country_id);
         db.insert("blogs", null, values);
         db.close();
-    }
-    public _0_blogs getBlogs(String blog_id) {
-        _0_blogs blog = new _0_blogs();
-        String selectQuery = "SELECT blog_id,title_blog,content_blog,picture_blog" +
-                ",country_id FROM users WHERE blog_id='" + blog_id + "'";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        if (cursor.moveToFirst()) {
-            blog.blog_id = cursor.getString(0);
-            blog.title_blog = cursor.getString(1);
-            blog.content_blog = cursor.getString(2);
-            blog.picture_blog = cursor.getInt(3);
-            blog.country_id = cursor.getString(4);
-        }
-        return blog;
     }
 
     public void addComments(_0_comments comment) {
@@ -170,24 +132,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.insert("orders", null, values);
         db.close();
     }
-    public _0_orders getOrders(String order_id) {
-        _0_orders order = new _0_orders();
-        String selectQuery = "SELECT order_id,user_id,hotel_id,hotel_details_id" +
-                ",date_start_order,date_end_order,status_order " +
-                "FROM users WHERE order_id='" + order_id + "'";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        if (cursor.moveToFirst()) {
-            order.order_id = cursor.getString(0);
-            order.user_id = cursor.getString(1);
-            order.hotel_id = cursor.getString(2);
-            order.hotel_details_id = cursor.getString(3);
-            order.date_start_order = cursor.getString(4);
-            order.date_end_order = cursor.getString(5);
-            order.status_order = cursor.getInt(6);
-        }
-        return order;
-    }
 
     public void addUsers(_0_users account) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -206,30 +150,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.insert("users", null, values);
         db.close();
     }
-    public _0_users getUser(String user_id) {
-        _0_users user = new _0_users();
-        String selectQuery = "SELECT user_id,name_client,email_client,password_client" +
-                ",date_of_birth_client,gender_client,phone_client,avatar_client" +
-                ",facebook_client,instagram_client,role_client FROM users WHERE user_id='" + user_id + "'";
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery(selectQuery, null);
-        if (cursor.moveToFirst()) {
-            user.user_id = cursor.getString(0);
-            user.name_client = cursor.getString(1);
-            user.email_client = cursor.getString(2);
-            user.password_client = cursor.getString(3);
-            user.date_of_birth_client = cursor.getString(4);
-            user.gender_client = cursor.getString(5);
-            user.phone_client = cursor.getString(6);
-            user.avatar_client = Integer.parseInt(cursor.getString(7));
-            user.facebook_client = cursor.getString(8);
-            user.instagram_client = cursor.getString(9);
-            user.role_client = cursor.getString(10);
-        }
-        return user;
-    }
-
-
 
 //    Contact getContact(int id) {
 //        Contact contact = new Contact();

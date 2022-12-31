@@ -111,16 +111,31 @@
                         android:id="@+id/editTextTextPersonName4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:cursorVisible="false"
                         android:drawableStart="@drawable/ic_baseline_calendar_24"
                         android:drawablePadding="@dimen/_16dp"
                         android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="From 01-01-2001"
                         android:inputType="textPersonName"
-                        android:hint="From Monday 15th to 17th July"
-                        android:textSize="@dimen/_16dp"
+                        android:textSize="@dimen/_16dp" />
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:clickable="false"
                         android:cursorVisible="false"
+                        android:drawableStart="@drawable/ic_baseline_calendar_24"
+                        android:drawablePadding="@dimen/_16dp"
+                        android:ems="10"
                         android:focusable="false"
-                        android:focusableInTouchMode="false"/>
+                        android:focusableInTouchMode="false"
+                        android:hint="To 02-01-2001"
+                        android:inputType="textPersonName"
+                        android:textSize="@dimen/_16dp" />
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/_195"

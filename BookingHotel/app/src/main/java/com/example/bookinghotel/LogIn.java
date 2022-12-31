@@ -2,9 +2,12 @@ package com.example.bookinghotel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -20,7 +23,6 @@ public class LogIn extends AppCompatActivity {
     EditText _81, _82;
     TextView _84;
     Button _83;
-    DatabaseHandler db = new DatabaseHandler(this);
 
     public void findViewById() {
         _84 = findViewById(R.id._84);
@@ -30,14 +32,24 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void setOnClickListener() {
+        SQLiteDatabase db = new DatabaseHandler(this).getWritableDatabase();
         _83.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                _0_users user = db.checkAccount(_81.getText().toString(), _82.getText().toString());
-                if(user.user_id != "" && user.name_client != "") {
-                    db.logIn(user);
+                String _email_client = _81.getText().toString();
+                String _password_client = _82.getText().toString();
+
+                String selectQuery = "SELECT user_id FROM users WHERE email_client='" + _email_client + "' AND password_client='" + _password_client + "';";
+                Cursor cursor = db.rawQuery(selectQuery, null);
+                if (cursor.moveToFirst()) {
+                    String user_id = cursor.getString(0);
+
+                    ContentValues values = new ContentValues();
+                    values.put("role_client", "login");
+                    db.update("users", values, "user_id = ?",
+                            new String[]{String.valueOf(user_id)});
                     Toast toast = Toast.makeText(getApplicationContext(), "Log in successfully!", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER,0,0);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                     //chuyển màn hình
                     Intent i = new Intent(LogIn.this, MainActivity.class);

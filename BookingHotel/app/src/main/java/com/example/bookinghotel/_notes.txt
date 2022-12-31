@@ -190,3 +190,139 @@ String intent = requireActivity().getIntent().getStringExtra("user_id");
 ////        }
 //        return user;
 //    }
+
+
+
+_0_users user = new _0_users();
+        String selectQuery = "SELECT user_id,name_client,email_client,password_client" +
+                ",date_of_birth_client,gender_client,phone_client,avatar_client" +
+                ",facebook_client,instagram_client,role_client FROM users WHERE user_id='1'";
+        SQLiteDatabase db = new DatabaseHandler(getContext()).getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            user.user_id = cursor.getString(0);
+            user.name_client = cursor.getString(1);
+            user.email_client = cursor.getString(2);
+            user.password_client = cursor.getString(3);
+            user.date_of_birth_client = cursor.getString(4);
+            user.gender_client = cursor.getString(5);
+            user.phone_client = cursor.getString(6);
+            user.avatar_client = Integer.parseInt(cursor.getString(7));
+            user.facebook_client = cursor.getString(8);
+            user.instagram_client = cursor.getString(9);
+            user.role_client = cursor.getString(10);
+        }
+
+        //xử lý sql trên fragment
+       String selectQuery = "SELECT avatar_client FROM users WHERE role_client='login'";
+               SQLiteDatabase db = new DatabaseHandler(getContext()).getWritableDatabase();
+               Cursor cursor = db.rawQuery(selectQuery, null);
+               if (cursor.moveToFirst()) {
+                   image5.setImageResource(cursor.getInt(0));
+               }
+               if (cursor.moveToFirst()) {
+                           do {
+                               search_models.add(new _1_table("", cursor.getString(0), "", "", "", "", "", "", cursor.getInt(3), cursor.getString(1), cursor.getInt(12), cursor.getInt(13), "2N - 1D", cursor.getString(5)));
+                           } while (cursor.moveToNext());
+                       }
+
+                //xử lí database trên activity
+                SQLiteDatabase db = new DatabaseHandler(this).getWritableDatabase();
+                        _83.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String _email_client = _81.getText().toString();
+                                String _password_client = _82.getText().toString();
+
+                                String selectQuery = "SELECT user_id FROM users WHERE email_client='" + _email_client + "' AND password_client='" + _password_client + "';";
+                                Cursor cursor = db.rawQuery(selectQuery, null);
+                                if (cursor.moveToFirst()) {
+                                    String user_id = cursor.getString(0);
+
+                                    ContentValues values = new ContentValues();
+                                    values.put("role_client", "login");
+                                    db.update("users", values, "user_id = ?",
+                                            new String[]{String.valueOf(user_id)});
+                                    Toast toast = Toast.makeText(getApplicationContext(), "Log in successfully!", Toast.LENGTH_LONG);
+                                    toast.setGravity(Gravity.CENTER, 0, 0);
+                                    toast.show();
+                                    //chuyển màn hình
+                                    Intent i = new Intent(LogIn.this, MainActivity.class);
+                                    startActivity(i);
+                                    overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
+                                } else {
+                                    Toast toast = Toast.makeText(getApplicationContext(), "Incorrect account or password!", Toast.LENGTH_LONG);
+                                    toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                                    toast.show();
+                                }
+                            }
+                        });
+
+                        //lấy biến kiểu int
+                        Intent intent = getIntent();
+                        int i = intent.getIntExtra("id", 0);
+                        String dataTransmited=intent.getStringExtra("dataToTransmitKey");
+
+                        i.putExtra("hotel_id", hotel.hotel_id);
+
+
+
+//        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom1, "GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Da Nang", "hotel"));
+//        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom2, "GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Hoi An", "hotel"));
+//        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom3, "GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Da Nang", "hotel"));
+//        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom1, "GO2JOY - WHITE LION ROOM", 25, 1, "2N - 1D", "Da Nang", "hotel"));
+//        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom2, "GO2JOY - MILAN 1 ROOM", 30, 1, "2N - 1D", "Hoi An", "hotel"));
+//        search_models.add(new _1_table("", "", "", "", "", "", "", "", R.drawable.hotelroom3, "GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, 1, "2N - 1D", "Da Nang", "hotel"));
+
+SELECT * FROM users WHERE avatar_client LIKE '%%' AND role_client LIKE '%lo%'
+
+
+<EditText
+        android:id="@+id/_130"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/robotoregular"
+
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:hint="Birthday"
+        android:focusableInTouchMode="false"
+
+        android:textSize="@dimen/_18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/_129"
+        app:layout_constraintTop_toBottomOf="@+id/_128" />
+
+Calendar calendar = Calendar.getInstance();
+                String Format = "dd/MM/yyyy";
+                SimpleDateFormat date_from = new SimpleDateFormat(Format, Locale.TAIWAN);
+
+date_from.format(calendar.getTime())
+
+                From dd/MM/yyyy to dd/MM/yyyy
+
+
+public static String reverseWordInMyString(String str)
+    {
+        String[] words = str.split(" ");
+        String reversedString = "";
+        for (int i = 0; i < words.length; i++)
+        {
+            String word = words[i];
+            String reverseWord = "";
+            for (int j = word.length()-1; j >= 0; j--)
+            {
+                reverseWord = reverseWord + word.charAt(j);
+            }
+            reversedString = reversedString + reverseWord + " ";
+        }
+        return reversedString;
+    }
+
+
+    overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);

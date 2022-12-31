@@ -15,6 +15,10 @@ import android.widget.Button;
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.Searching;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class SavedFragment extends Fragment {
     Button button;
     @Override
@@ -25,6 +29,13 @@ public class SavedFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getActivity(), Searching.class);
+                Calendar calendar = Calendar.getInstance();
+                String Format = "dd/MM/yyyy";
+                SimpleDateFormat date_from = new SimpleDateFormat(Format, Locale.TAIWAN);
+                i.putExtra("date_from", date_from.format(calendar.getTime()));
+                i.putExtra("date_to", date_from.format(calendar.getTime()));
+                i.putExtra("country_name", "");
+                i.putExtra("search", "");
                 startActivity(i);
             }
         });

@@ -3,6 +3,8 @@ package com.example.bookinghotel;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -13,20 +15,28 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
+import com.example.bookinghotel.database.DatabaseHandler;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DetailRoom extends AppCompatActivity {
     ViewFlipper viewFlipper;
-    TextView _70;
+    TextView _70, _18, _19, _22, _38, _44, _49;
     ImageView _51;
     Button _72;
+    String hotel_id;
 
     public void findViewById() {
         _70 = findViewById(R.id._70);
         _51 = findViewById(R.id._51);
         _72 = findViewById(R.id._72);
+        _18 = findViewById(R.id._18);
+        _19 = findViewById(R.id._19);
+        _22 = findViewById(R.id._22);
+        _38 = findViewById(R.id._38);
+        _44 = findViewById(R.id._44);
+        _49 = findViewById(R.id._49);
         viewFlipper = findViewById(R.id._17);
     }
 
@@ -42,6 +52,7 @@ public class DetailRoom extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, Review.class);
+                i.putExtra("hotel_id", hotel_id);
                 startActivity(i);
             }
         });
@@ -54,7 +65,31 @@ public class DetailRoom extends AppCompatActivity {
         });
     }
 
-    public void others() {
+    public void others(SQLiteDatabase db, Intent intent) {
+        hotel_id = intent.getStringExtra("hotel_id");
+        String selectQuery = "SELECT hotels.hotel_id, name_hotel, description_hotel" +
+                ", address_hotel FROM hotels " +
+                "WHERE hotels.hotel_id='" + hotel_id + "'";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            _18.setText(cursor.getString(1));
+            _19.setText(cursor.getString(2));
+            _22.setText(cursor.getString(3));
+        }
+        String number_of_day_other = intent.getStringExtra("number_of_day_other");
+        String CheckIn = number_of_day_other.substring(5, 15);
+        String Checkout = number_of_day_other.substring(19);
+        _38.setText(CheckIn);
+        _44.setText(Checkout);
+
+        String selectQuery1 = "SELECT COUNT(*) AS count FROM hotels, comments " +
+                "WHERE hotels.hotel_id=comments.hotel_id " +
+                "AND hotels.hotel_id='"+hotel_id+"';";
+        Cursor cursor1 = db.rawQuery(selectQuery1, null);
+        if (cursor1.moveToFirst()) {
+            _49.setText(cursor1.getString(0));
+        }
+
     }
 
     private void ActionViewFlipper() {
@@ -81,9 +116,12 @@ public class DetailRoom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_room);
+        Intent intent = getIntent();
+
+        SQLiteDatabase db = new DatabaseHandler(this).getWritableDatabase();
         findViewById();
+        others(db, intent);
         setOnClickListener();
-        others();
         ActionViewFlipper();
     }
 }

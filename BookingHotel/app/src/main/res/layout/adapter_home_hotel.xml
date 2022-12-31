@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardviewhomehotel"
     android:layout_width="250dp"
     android:layout_height="wrap_content"
     android:layout_marginEnd="10dp"
@@ -8,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="250dp"
-        android:layout_height="210dp"
+        android:layout_height="220dp"
         android:orientation="vertical">
 
         <ImageView
@@ -22,35 +23,34 @@
             android:id="@+id/namehotel_tophotel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="9dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:text="Son Ha Hotel"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="70dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:orientation="horizontal"
             android:padding="2dp">
-
-            <TextView
-                android:id="@+id/titleprice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:text="$"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/pricehotel_tophotel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="45"
+                android:text="5"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/star_hotel" />
         </LinearLayout>
 
 

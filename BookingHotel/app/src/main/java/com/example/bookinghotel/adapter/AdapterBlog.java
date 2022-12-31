@@ -69,7 +69,6 @@ public class AdapterBlog extends RecyclerView.Adapter<AdapterBlog.ListBlog> {
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), BlogDetail.class);
                 i.putExtra("blog_id", blog1.blog_id);
-                i.putExtra("country_id", blog1.country_id);
                 v.getContext().startActivity(i);
             }
         });

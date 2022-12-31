@@ -63,12 +63,14 @@ public class AdapterSearching extends RecyclerView.Adapter<AdapterSearching.List
         }
         holder._143.setImageResource(room_history_1.picture_hotel);
         holder._146.setText(room_history_1.name_hotel);
-        holder._145.setText(String.valueOf(room_history_1.price_hotel_detail));
+        holder._145.setText(String.valueOf(room_history_1.star_hotel));
         holder._148.setText(room_history_1.number_of_day_other);
         holder.adapterLayout_list_resultHotel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(v.getContext(), DetailRoom.class);
+                i.putExtra("hotel_id", room_history_1.hotel_id);
+                i.putExtra("number_of_day_other", room_history_1.number_of_day_other);
                 v.getContext().startActivity(i);
             }
         });
