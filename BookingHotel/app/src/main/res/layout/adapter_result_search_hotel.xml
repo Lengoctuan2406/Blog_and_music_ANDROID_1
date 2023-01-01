@@ -55,6 +55,16 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/star_hotel" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/_143"
+                app:layout_constraintTop_toTopOf="@+id/_143"
+                app:srcCompat="@drawable/icon_unsave_hotel" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView

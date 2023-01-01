@@ -1,5 +1,7 @@
 package com.example.bookinghotel.fragment_room_history;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,7 @@ import android.view.ViewGroup;
 
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.adapter.AdapterRoomHistoryDone;
+import com.example.bookinghotel.database.DatabaseHandler;
 import com.example.bookinghotel.database._2_table;
 
 import java.util.ArrayList;
@@ -36,10 +39,24 @@ public class DoneFragment extends Fragment {
 
     private List<_2_table> getListRoom_Done() {
         List<_2_table> room_histories = new ArrayList<>();
-        room_histories.add(new _2_table("", "", "", "", "", "", "", "", R.drawable.hotelroom1,"GO2JOY - WHITE LION ROOM", 179, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new _2_table("", "", "", "", "", "", "", "", R.drawable.hotelroom2,"GO2JOY - MILAN 1 ROOM", 30, "2N - 1D", "Single beds", "Hoi An"));
-        room_histories.add(new _2_table("", "", "", "", "", "", "", "", R.drawable.hotelroom3,"GO2JOY- TRẦN GIA ROOM TÂN PHÚ", 14, "2N - 1D", "Single beds", "Da Nang"));
-        room_histories.add(new _2_table("", "", "", "", "", "", "", "", R.drawable.hotelroom1,"GO2JOY - BẠN TÔI ROOM", 15, "2N - 1D", "Single beds", "Da Nang"));
+        SQLiteDatabase db = new DatabaseHandler(getContext()).getWritableDatabase();
+        String selectQuery = "SELECT order_id, picture_hotel, name_hotel" +
+                ", price_hotel_detail, date_start_order, date_end_order" +
+                ", number_of_room_hotel_detail, country_name " +
+                "FROM orders, users, hotel_details, hotels, countries " +
+                "WHERE orders.user_id=users.user_id " +
+                "AND orders.hotel_details_id=hotel_details.hotel_details_id " +
+                "AND hotel_details.hotel_id=hotels.hotel_id " +
+                "AND countries.country_id=hotels.country_id " +
+                "AND status_order=1;";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                String date_start_order = cursor.getString(4).substring(0, 5);
+                String date_end_order = cursor.getString(5).substring(0, 5);
+                room_histories.add(new _2_table("", "", "", "", "", "", cursor.getString(0), "", cursor.getInt(1),cursor.getString(2), cursor.getInt(3), date_start_order + " - " + date_end_order, cursor.getString(6), cursor.getString(7)));
+            } while (cursor.moveToNext());
+        }
         return room_histories;
     }
 

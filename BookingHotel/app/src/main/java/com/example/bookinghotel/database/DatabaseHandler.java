@@ -26,7 +26,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE users(user_id TEXT PRIMARY KEY,name_client TEXT,email_client TEXT,password_client TEXT,date_of_birth_client TEXT, gender_client TEXT, phone_client TEXT, avatar_client INTEGER, facebook_client TEXT, instagram_client TEXT, role_client TEXT);");
         db.execSQL("CREATE TABLE hotels(hotel_id TEXT PRIMARY KEY,name_hotel TEXT, description_hotel TEXT, picture_hotel INTEGER, country_id TEXT, address_hotel TEXT, star_hotel INTEGER, like_id TEXT);");
-        db.execSQL("CREATE TABLE likes(like_id TEXT PRIMARY KEY,user_id TEXT);");
+        db.execSQL("CREATE TABLE likes(like_id TEXT PRIMARY KEY,hotel_id TEXT,user_id TEXT);");
         db.execSQL("CREATE TABLE hotel_details(hotel_details_id TEXT PRIMARY KEY,hotel_id TEXT,number_of_room_hotel_detail TEXT, size_hotel_detail TEXT, description_hotel_detail TEXT, price_hotel_detail INTEGER, status_hotel_detail INTEGER, picture_1_hotel_detail INTEGER, picture_2_hotel_detail INTEGER, picture_3_hotel_detail INTEGER);");
         db.execSQL("CREATE TABLE comments(comments_id TEXT PRIMARY KEY,hotel_id TEXT,user_id TEXT, content_comments TEXT);");
         db.execSQL("CREATE TABLE orders(order_id TEXT PRIMARY KEY,user_id TEXT, hotel_id TEXT, hotel_details_id TEXT, date_start_order TEXT, date_end_order TEXT, image_payment INTEGER, status_order INTEGER);");
@@ -114,6 +114,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("like_id", like.like_id);
+        values.put("hotel_id", like.hotel_id);
         values.put("user_id", like.user_id);
         db.insert("likes", null, values);
         db.close();

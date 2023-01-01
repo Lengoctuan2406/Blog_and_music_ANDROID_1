@@ -16,6 +16,7 @@ public class _1_table {
     public int price_hotel_detail;
     public int status_hotel_detail;
     public int picture_hotel;
+    public int save_hotel;
     //Others
     public String number_of_day_other;
 
@@ -24,7 +25,7 @@ public class _1_table {
                     String _order_id, String _blog_id,
                     int _picture_hotel, String _name_hotel, int _star_hotel,
                     int _status_hotel_detail, String _number_of_day_other,
-                    String _address_hotel) {
+                    String _address_hotel, int _save_hotel) {
         user_id = _user_id;
         hotel_id = _hotel_id;
         country_id = _country_id;
@@ -39,5 +40,6 @@ public class _1_table {
         status_hotel_detail = _status_hotel_detail;
         number_of_day_other = _number_of_day_other;
         address_hotel = _address_hotel;
+        save_hotel = _save_hotel;
     }
 }

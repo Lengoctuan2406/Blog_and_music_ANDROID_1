@@ -232,11 +232,11 @@ public class HomeFragment extends Fragment {
                 ", picture_hotel, address_hotel, star_hotel" +
                 ", like_id, country_name " +
                 "FROM hotels, countries " +
-                "WHERE hotels.country_id=countries.country_id";
+                "WHERE hotels.country_id=countries.country_id ORDER BY star_hotel;";
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
             do {
-                search_models.add(new _1_table("", cursor.getString(0), "", "", "", "", "", "", cursor.getInt(3), cursor.getString(1), cursor.getInt(5), 0, "", cursor.getString(7)));
+                search_models.add(new _1_table("", cursor.getString(0), "", "", "", "", "", "", cursor.getInt(3), cursor.getString(1), cursor.getInt(5), 0, "", cursor.getString(7), 0));
             } while (cursor.moveToNext());
         }
         return search_models;

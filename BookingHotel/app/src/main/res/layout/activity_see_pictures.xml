@@ -80,12 +80,6 @@
                 android:layout_marginTop="@dimen/_16dp"
                 app:srcCompat="@drawable/hotelroom3" />
 
-            <ImageView
-                android:id="@+id/_114"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_300dp"
-                android:layout_marginTop="@dimen/_16dp"
-                app:srcCompat="@drawable/hotelroom1" />
         </LinearLayout>
     </ScrollView>
 

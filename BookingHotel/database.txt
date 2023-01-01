@@ -23,11 +23,12 @@ Table hotels {
 	country_id TEXT
 	address_hotel TEXT	
 	star_hotel INTEGER
-	like_id TEXT
+	//like_id TEXT
 }
 
 Table likes {
 	like_id TEXT
+	hotel_id TEXT
 	user_id TEXT
 }
 

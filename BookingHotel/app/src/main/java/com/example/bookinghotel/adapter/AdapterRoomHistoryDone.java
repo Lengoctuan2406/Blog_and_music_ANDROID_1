@@ -1,14 +1,17 @@
 package com.example.bookinghotel.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bookinghotel.BillBank;
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.database._2_table;
 
@@ -33,6 +36,7 @@ public class AdapterRoomHistoryDone extends RecyclerView.Adapter<AdapterRoomHist
     public class ListRoomHistory extends RecyclerView.ViewHolder{
         private ImageView _171;
         private TextView _172, _174, _176, _175, _178;
+        Button buttonseebill1;
 
         public ListRoomHistory(@NonNull View itemView) {
             super(itemView);
@@ -42,6 +46,7 @@ public class AdapterRoomHistoryDone extends RecyclerView.Adapter<AdapterRoomHist
             _176 = itemView.findViewById(R.id._176);
             _178 = itemView.findViewById(R.id._178);
             _175 = itemView.findViewById(R.id._175);
+            buttonseebill1 = itemView.findViewById(R.id.buttonseebill1);
         }
     }
 
@@ -65,5 +70,13 @@ public class AdapterRoomHistoryDone extends RecyclerView.Adapter<AdapterRoomHist
         holder._175.setText(room_history_1.number_of_day_other);
         holder._176.setText(room_history_1.number_of_room_hotel_detail);
         holder._178.setText(room_history_1.address_hotel);
+        holder.buttonseebill1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), BillBank.class);
+                i.putExtra("order_id", room_history_1.order_id);
+                view.getContext().startActivity(i);
+            }
+        });
     }
 }

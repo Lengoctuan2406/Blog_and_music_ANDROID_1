@@ -31,6 +31,7 @@
                 android:id="@+id/_18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_32dp"
                 android:gravity="center"
                 android:text="Fusion Original Saigon Centre"
@@ -44,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_16dp"
+                android:gravity="center"
                 android:text="Fusion Original Saigon Centre has a restaurant, outdoor swimming pool, a fitness center and bar in Ho Chi Minh City. Among the facilities at this property are a 24-hour front desk and room service, along with free WiFi throughout the property."
                 android:textSize="@dimen/_text_14sp" />
 

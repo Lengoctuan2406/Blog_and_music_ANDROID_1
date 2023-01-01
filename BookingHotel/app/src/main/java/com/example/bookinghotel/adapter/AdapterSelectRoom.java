@@ -16,6 +16,7 @@ import com.example.bookinghotel.DetailRoom;
 import com.example.bookinghotel.FillDetail;
 import com.example.bookinghotel.R;
 import com.example.bookinghotel.RoomHistory;
+import com.example.bookinghotel.SeePictures;
 import com.example.bookinghotel.database._1_table;
 import com.example.bookinghotel.database._6_table;
 
@@ -40,6 +41,7 @@ public class AdapterSelectRoom extends RecyclerView.Adapter<AdapterSelectRoom.Se
         private TextView number_of_room_hotel_detail, price_hotel_detail
                 , size_hotel_detail, description_hotel_detail, _280;
         private Button _260;
+        private TextView _600;
 
         public SelectRoom(@NonNull View itemView) {
             super(itemView);
@@ -49,6 +51,7 @@ public class AdapterSelectRoom extends RecyclerView.Adapter<AdapterSelectRoom.Se
             description_hotel_detail = itemView.findViewById(R.id.descriptionselectRoom);
             _260 = itemView.findViewById(R.id._260);
             _280 = itemView.findViewById(R.id._280);
+            _600 = itemView.findViewById(R.id._600);
 //            adapterLayout_list_resultHotel = itemView.findViewById(R.id.adapterLayout_list_resultHotel);
         }
     }
@@ -77,6 +80,14 @@ public class AdapterSelectRoom extends RecyclerView.Adapter<AdapterSelectRoom.Se
                 Intent i = new Intent(view.getContext(), FillDetail.class);
                 i.putExtra("hotel_details_id", room_history_1.hotel_details_id);
                 i.putExtra("number_of_day_other", room_history_1.number_of_day_other);
+                view.getContext().startActivity(i);
+            }
+        });
+        holder._600.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), SeePictures.class);
+                i.putExtra("hotel_details_id", room_history_1.hotel_details_id);
                 view.getContext().startActivity(i);
             }
         });

@@ -31,6 +31,7 @@ public class Searching extends AppCompatActivity {
     EditText _109;
     Button _197;
     String country_name, date_from, date_to, search;
+    String user_id;
 
 
     public void findViewById() {
@@ -81,12 +82,20 @@ public class Searching extends AppCompatActivity {
     private List<_1_table> getListSearch(SQLiteDatabase db) {
         List<_1_table> search_models = new ArrayList<>();
         Intent intent = getIntent();
+        String changeSave;
         country_name = intent.getStringExtra("country_name");
         date_from = intent.getStringExtra("date_from");
         date_to = intent.getStringExtra("date_to");
         search = intent.getStringExtra("search");
 
         String number_of_day_other = "From " + date_from + " to " + date_to;
+
+        String selectQuery_cline = "SELECT user_id " +
+                "FROM users WHERE role_client='login'";
+        Cursor cursor_client = db.rawQuery(selectQuery_cline, null);
+        if (cursor_client.moveToFirst()) {
+            user_id = cursor_client.getString(0);
+        }
 
         String selectQuery = "";
         if(search.length() != 0) {
@@ -110,7 +119,19 @@ public class Searching extends AppCompatActivity {
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
             do {
-                search_models.add(new _1_table("", cursor.getString(0), "", "", "", "", "", "", cursor.getInt(3), cursor.getString(1), cursor.getInt(5), 0, number_of_day_other, cursor.getString(7)));
+                int save_hotel;
+                String selectQuery1 = "SELECT * " +
+                        "FROM hotels, likes " +
+                        "WHERE hotels.hotel_id=likes.hotel_id " +
+                        "AND hotels.hotel_id='" + cursor.getString(0) + "' " +
+                        "AND user_id='" + user_id + "'";
+                Cursor cursor_client1 = db.rawQuery(selectQuery1, null);
+                if (cursor_client1.moveToFirst()) {
+                    save_hotel = R.drawable.icon_save_hotel;
+                } else {
+                    save_hotel = R.drawable.icon_unsave_hotel;
+                }
+                search_models.add(new _1_table(user_id, cursor.getString(0), "", "", "", "", "", "", cursor.getInt(3), cursor.getString(1), cursor.getInt(5), 0, number_of_day_other, cursor.getString(7), save_hotel));
             } while (cursor.moveToNext());
         }
         return search_models;

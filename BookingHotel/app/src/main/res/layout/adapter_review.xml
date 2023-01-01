@@ -27,7 +27,7 @@
         <!--        LINEARLAYOUT IMG, NAME, ROLE-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -38,8 +38,8 @@
                 <!--                IMAGE REVIEW-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/_149"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginEnd="16dp"
                     app:cardCornerRadius="@dimen/_150dp"
@@ -50,46 +50,35 @@
                         android:id="@+id/_150"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:background="@drawable/image_customer_test" />
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/_151"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/robotobold"
                     android:text="Name customer"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/_152"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/_153"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Guest"
-                    android:textSize="16dp" />
+                    android:layout_marginTop="3dp"
+                    android:text="This is Content review" />
 
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/_153"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="This is Content review" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
