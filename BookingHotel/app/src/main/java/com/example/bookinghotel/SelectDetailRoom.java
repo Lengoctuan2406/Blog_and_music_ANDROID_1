@@ -42,11 +42,25 @@ public class SelectDetailRoom extends AppCompatActivity {
     }
 
     private List<_6_table> getListReview() {
+        Intent intent = getIntent();
         List<_6_table> hotel_details = new ArrayList<>();
+        SQLiteDatabase db = new DatabaseHandler(this).getWritableDatabase();
 
-        hotel_details.add(new _6_table("", "", "", "1", "", "", "", "","Singe room","200", "description hotel detail", 20));
-        hotel_details.add(new _6_table("", "", "", "2", "", "", "", "","Double","250", "description hotel detail", 50));
+        String hotel_id = intent.getStringExtra("hotel_id");
+        String number_of_day_other = intent.getStringExtra("number_of_day_other");
 
+        String selectQuery = "SELECT hotel_details_id, hotel_id" +
+                ", number_of_room_hotel_detail, size_hotel_detail" +
+                ", description_hotel_detail, price_hotel_detail" +
+                ", status_hotel_detail, picture_1_hotel_detail" +
+                ", picture_2_hotel_detail, picture_3_hotel_detail " +
+                "FROM hotel_details WHERE hotel_id='"+ hotel_id +"'";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                hotel_details.add(new _6_table("", cursor.getString(1), "", cursor.getString(0), "", "", "", "",cursor.getString(2),cursor.getString(3), cursor.getString(4), cursor.getInt(5), number_of_day_other));
+            } while (cursor.moveToNext());
+        }
         return hotel_details;
 
 //        Intent intent = getIntent();
@@ -69,9 +83,9 @@ public class SelectDetailRoom extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_detail_room);
 
-//        findViewById();
-//        setOnClickListener();
-//        others();
+        findViewById();
+        setOnClickListener();
+        others();
 
     }
 }

@@ -29,7 +29,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE likes(like_id TEXT PRIMARY KEY,user_id TEXT);");
         db.execSQL("CREATE TABLE hotel_details(hotel_details_id TEXT PRIMARY KEY,hotel_id TEXT,number_of_room_hotel_detail TEXT, size_hotel_detail TEXT, description_hotel_detail TEXT, price_hotel_detail INTEGER, status_hotel_detail INTEGER, picture_1_hotel_detail INTEGER, picture_2_hotel_detail INTEGER, picture_3_hotel_detail INTEGER);");
         db.execSQL("CREATE TABLE comments(comments_id TEXT PRIMARY KEY,hotel_id TEXT,user_id TEXT, content_comments TEXT);");
-        db.execSQL("CREATE TABLE orders(order_id TEXT PRIMARY KEY,user_id TEXT, hotel_id TEXT, hotel_details_id TEXT, date_start_order TEXT, date_end_order TEXT, status_order INTEGER);");
+        db.execSQL("CREATE TABLE orders(order_id TEXT PRIMARY KEY,user_id TEXT, hotel_id TEXT, hotel_details_id TEXT, date_start_order TEXT, date_end_order TEXT, image_payment INTEGER, status_order INTEGER);");
         db.execSQL("CREATE TABLE blogs(blog_id TEXT PRIMARY KEY,title_blog TEXT, content_blog TEXT, picture_blog INTEGER, country_id TEXT);");
         db.execSQL("CREATE TABLE countries(country_id TEXT PRIMARY KEY,country_name TEXT);");
     }
@@ -128,6 +128,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put("hotel_details_id", order.hotel_details_id);
         values.put("date_start_order", order.date_start_order);
         values.put("date_end_order", order.date_end_order);
+        values.put("image_payment", order.image_payment);
         values.put("status_order", order.status_order);
         db.insert("orders", null, values);
         db.close();

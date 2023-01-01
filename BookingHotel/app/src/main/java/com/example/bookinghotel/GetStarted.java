@@ -74,7 +74,7 @@ public class GetStarted extends AppCompatActivity {
                 , "1", "", "", "cũng được đấy"));
 
         db.addOrders(new _0_orders("1", "1", "", "1", ""
-                , "", "1", "", "2001-02-01", "2001-02-01", 0));
+                , "", "1", "", "2001-02-01", "2001-02-01", 0, R.drawable.qr_momo));
 
         db.addBlogs(new _0_blogs("", "", "1", "", ""
                 , "", "", "1", "title của blog", "toàn bộ nội dung\nxuoongs hàng", R.drawable.blog1));
@@ -90,7 +90,7 @@ public class GetStarted extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
         findViewById();
-        //others();
+        others();
         setOnClickListener();
     }
 }

@@ -59,11 +59,12 @@ Table comments {
 Table orders {
   	order_id TEXT pk  
 	user_id TEXT
-  	hotel_id TEXT
+  	//hotel_id TEXT
 	hotel_details_id TEXT
 	date_start_order DATE(ngày bắt đầu)//cài cứng ngày bắt đầu và ngày kết thúc
 	date_end_order DATE(ngày kết thúc)
-  	status_order INTEGER//0 là đang duyệt, 1 là trong giai đoạn, 2 là kết thúc
+	image_payment INTEGER//ngân hàng hoặc momo
+  	status_order INTEGER//0 là doing, 1 là done, 2 là cancel
 }
 
 Table blogs {
@@ -82,7 +83,7 @@ Table countries {
 }
 
 
-
+SELECT order_id, name_client, phone_client, email_client, name_hotel, date_start_order, date_end_order, number_of_room_hotel_detail, price_hotel_detailFROM orders, users, hotel_details, hotels WHERE orders.user_id=users.user_id AND orders.hotel_details_id=hotel_details.hotel_details_id AND hotel_details.hotel_id=hotels.hotel_id
 
 
 

@@ -48,7 +48,7 @@ public class _6_table {
                     String _hotel_details_id, String _like_id, String _comments_id,
                     String _order_id, String _blog_id,
 
-String _number_of_room_hotel_detail, String _size_hotel_detail, String _description_hotel_detail, int _price_hotel_detail) {
+String _number_of_room_hotel_detail, String _size_hotel_detail, String _description_hotel_detail, int _price_hotel_detail, String _number_of_day_other) {
         user_id = _user_id;
         hotel_id = _hotel_id;
         country_id = _country_id;
@@ -61,5 +61,6 @@ String _number_of_room_hotel_detail, String _size_hotel_detail, String _descript
         size_hotel_detail = _size_hotel_detail;
         description_hotel_detail = _description_hotel_detail;
         price_hotel_detail = _price_hotel_detail;
+        number_of_day_other = _number_of_day_other;
     }
 }

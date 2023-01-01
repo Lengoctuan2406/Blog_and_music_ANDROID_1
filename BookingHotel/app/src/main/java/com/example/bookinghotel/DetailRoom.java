@@ -25,7 +25,7 @@ public class DetailRoom extends AppCompatActivity {
     TextView _70, _18, _19, _22, _38, _44, _49;
     ImageView _51;
     Button _72;
-    String hotel_id;
+    String hotel_id, number_of_day_other;
 
     public void findViewById() {
         _70 = findViewById(R.id._70);
@@ -59,7 +59,9 @@ public class DetailRoom extends AppCompatActivity {
         _72.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(DetailRoom.this, RoomHistory.class);
+                Intent i = new Intent(DetailRoom.this, SelectDetailRoom.class);
+                i.putExtra("hotel_id", hotel_id);
+                i.putExtra("number_of_day_other", number_of_day_other);
                 startActivity(i);
             }
         });
@@ -76,7 +78,7 @@ public class DetailRoom extends AppCompatActivity {
             _19.setText(cursor.getString(2));
             _22.setText(cursor.getString(3));
         }
-        String number_of_day_other = intent.getStringExtra("number_of_day_other");
+        number_of_day_other = intent.getStringExtra("number_of_day_other");
         String CheckIn = number_of_day_other.substring(5, 15);
         String Checkout = number_of_day_other.substring(19);
         _38.setText(CheckIn);

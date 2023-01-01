@@ -118,7 +118,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textViewFullName"
+                                android:id="@+id/_namehoteldetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="16dp"
@@ -128,7 +128,7 @@
                                 android:textSize="15sp" />
 
                             <TextView
-                                android:id="@+id/textViewPhoneNumber"
+                                android:id="@+id/_phonepaymentdetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="20dp"
@@ -138,7 +138,7 @@
                                 android:textSize="15sp" />
 
                             <TextView
-                                android:id="@+id/textViewEmail"
+                                android:id="@+id/_emailpaymentdetail"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="20dp"
@@ -172,6 +172,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -219,15 +220,6 @@
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
-                        <TextView
-                            android:id="@+id/titlePrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:fontFamily="@font/encodesanssemicondensedmedium"
-                            android:text="Price"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -236,7 +228,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/textViewFullName2"
+                            android:id="@+id/_textViewHotelname"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -246,27 +238,27 @@
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/textViewCheckIn"
+                            android:id="@+id/_textViewCheckIn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="24dp"
                             android:fontFamily="@font/encodesanssemicondensedmedium"
-                            android:text="13:00"
+                            android:text="20/10/2001"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/textViewCheckOut"
+                            android:id="@+id/_textViewCheckOut"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:fontFamily="@font/encodesanssemicondensedmedium"
-                            android:text="17:30"
+                            android:text="20/10/2001"
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
                         <TextView
-                            android:id="@+id/textViewRoomType"
+                            android:id="@+id/_textViewRoomType"
                             android:layout_width="143dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
@@ -276,16 +268,6 @@
                             android:textColor="#000000"
                             android:textSize="15sp" />
 
-                        <TextView
-                            android:id="@+id/textViewPrice"
-                            android:layout_width="146dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="24dp"
-                            android:layout_marginEnd="116dp"
-                            android:fontFamily="@font/encodesanssemicondensedmedium"
-                            android:text="350.000"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -341,7 +323,8 @@
                 <TextView
                     android:id="@+id/titleTotalPrice"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="250dp"
                     android:fontFamily="@font/encodesanssemicondensedmedium"
                     android:text="Total price"
                     android:textColor="#000000"
@@ -349,12 +332,10 @@
 
                 <TextView
                     android:id="@+id/textViewTotalPrice"
-                    android:layout_width="127dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:fontFamily="@font/encodesanssemicondensedbold"
-                    android:text="350.000"
+                    android:text="$200"
                     android:textColor="#1679B0"
                     android:textSize="18sp" />
             </LinearLayout>

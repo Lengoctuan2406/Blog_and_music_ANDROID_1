@@ -1,4 +1,4 @@
-_200: da xong
+_260: da xong
 
 //    private ItemClickListener itemClickListener;
 
@@ -328,3 +328,5 @@ public static String reverseWordInMyString(String str)
     overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
 
 androidx.recyclerview.widget.RecyclerView
+
+@color/FFEAF4F9

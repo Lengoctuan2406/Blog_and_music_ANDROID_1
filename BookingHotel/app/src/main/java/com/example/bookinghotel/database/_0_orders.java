@@ -18,12 +18,13 @@ public class _0_orders {
     public int status_order; //33
     public String blog_id; //34
     public int picture_hotel; //39
+    public int image_payment;
 
     public _0_orders (){}
     public _0_orders(String _user_id, String _hotel_id, String _country_id,
                        String _hotel_details_id, String _like_id, String _comments_id,
                        String _order_id, String _blog_id,
-                       String _date_start_order, String _date_end_order, int _status_order) {
+                       String _date_start_order, String _date_end_order, int _status_order, int _image_payment) {
         user_id = _user_id;
         hotel_id = _hotel_id;
         country_id = _country_id;
@@ -35,5 +36,6 @@ public class _0_orders {
         date_start_order = _date_start_order;
         date_end_order = _date_end_order;
         status_order = _status_order;
+        image_payment = _image_payment;
     }
 }
