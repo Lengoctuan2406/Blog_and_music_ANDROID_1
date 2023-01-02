@@ -93,7 +93,7 @@ public class FillDetail extends AppCompatActivity {
             _checkinhoteldetail.setText(CheckIn);
             _checkouthoteldetail.setText(Checkout);
             _roomtypehoteldetail.setText(cursor.getString(3));
-            _pricehoteldetail.setText(cursor.getString(6));
+            _pricehoteldetail.setText("$" + cursor.getString(6));
         }
 
         String selectQuery1 = "SELECT name_client, phone_client, email_client, user_id " +

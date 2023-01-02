@@ -51,7 +51,7 @@
         android:layout_marginBottom="@dimen/_8dp"
         android:background="@drawable/radius_white_all"
         android:ems="10"
-        android:hint="Username or Email"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="@dimen/_32dp"
         app:layout_constraintBottom_toTopOf="@+id/_82"
