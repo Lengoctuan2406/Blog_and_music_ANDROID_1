@@ -52,8 +52,8 @@ public class YourAccount extends AppCompatActivity {
         DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                calendar.set(Calendar.YEAR,year);
-                calendar.set(Calendar.MONTH,month);
+                calendar.set(Calendar.YEAR, year);
+                calendar.set(Calendar.MONTH, month);
                 calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
                 String Format = "dd/MM/yyyy";
@@ -81,28 +81,41 @@ public class YourAccount extends AppCompatActivity {
         _138.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ContentValues values = new ContentValues();
-                values.put("name_client", _128.getText().toString());
-                values.put("date_of_birth_client", _130.getText().toString());
-                values.put("email_client", _132.getText().toString());
-                values.put("phone_client", _137.getText().toString());
-                if(_134.isChecked()){
-                    values.put("gender_client", "Nam");
-                } else if (_135.isChecked()) {
-                    values.put("gender_client", "Nu");
+                String phone = "^(0|\\+84)(\\s|\\.)?((3[2-9])|(5[689])|(7[06-9])|(8[1-689])|(9[0-46-9]))(\\d)(\\s|\\.)?(\\d{3})(\\s|\\.)?(\\d{3})$";
+                String email = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+                if (!_137.getText().toString().matches(phone)) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Invalid phone number!", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                } else if (!_132.getText().toString().matches(email)) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Invalid email!", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                } else {
+                    ContentValues values = new ContentValues();
+                    values.put("name_client", _128.getText().toString());
+                    values.put("date_of_birth_client", _130.getText().toString());
+                    values.put("email_client", _132.getText().toString());
+                    values.put("phone_client", _137.getText().toString());
+                    if (_134.isChecked()) {
+                        values.put("gender_client", "Nam");
+                    } else if (_135.isChecked()) {
+                        values.put("gender_client", "Nu");
+                    }
+                    db1.update("users", values, "role_client = ?",
+                            new String[]{"login"});
+
+                    Intent i = new Intent(YourAccount.this, MainActivity.class);
+                    i.putExtra("fragment", 4);
+                    //finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(i);
+
+                    Toast toast = Toast.makeText(getApplicationContext(), "Account update successful!", Toast.LENGTH_LONG);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
                 }
-                db1.update("users", values, "role_client = ?",
-                        new String[]{"login"});
-
-                Intent i = new Intent(YourAccount.this, MainActivity.class);
-                i.putExtra("fragment", 4);
-                //finish();
-                overridePendingTransition(0, 0);
-                startActivity(i);
-
-                Toast toast = Toast.makeText(getApplicationContext(), "Account update successful!", Toast.LENGTH_LONG);
-                toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
             }
         });
 
@@ -129,7 +142,7 @@ public class YourAccount extends AppCompatActivity {
             _130.setText(cursor.getString(1));
             _132.setText(cursor.getString(2));
             _137.setText(cursor.getString(3));
-            if(cursor.getString(4) == "Nam"){
+            if (cursor.getString(4) == "Nam") {
                 _135.setChecked(true);
             } else {
                 _134.setChecked(true);
