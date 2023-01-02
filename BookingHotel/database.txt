@@ -82,14 +82,3 @@ Table countries {
 
 	country_name TEXT
 }
-
-
-SELECT order_id, name_client, phone_client, email_client, name_hotel, date_start_order, date_end_order, number_of_room_hotel_detail, price_hotel_detailFROM orders, users, hotel_details, hotels WHERE orders.user_id=users.user_id AND orders.hotel_details_id=hotel_details.hotel_details_id AND hotel_details.hotel_id=hotels.hotel_id
-
-
-
-
-
-
-
-
