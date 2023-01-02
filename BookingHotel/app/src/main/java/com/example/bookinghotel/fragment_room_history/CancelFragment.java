@@ -39,7 +39,16 @@ public class CancelFragment extends Fragment {
 
     private List<_2_table> getListRoom_Cancel() {
         List<_2_table> room_histories = new ArrayList<>();
+        String user_id = "";
         SQLiteDatabase db = new DatabaseHandler(getContext()).getWritableDatabase();
+
+        String select_client = "SELECT user_id " +
+                "FROM users WHERE role_client='login'";
+        Cursor cursor_client = db.rawQuery(select_client, null);
+        if (cursor_client.moveToFirst()) {
+            user_id = cursor_client.getString(0);
+        }
+
         String selectQuery = "SELECT order_id, picture_hotel, name_hotel" +
                 ", price_hotel_detail, date_start_order, date_end_order" +
                 ", number_of_room_hotel_detail, country_name " +
@@ -48,7 +57,7 @@ public class CancelFragment extends Fragment {
                 "AND orders.hotel_details_id=hotel_details.hotel_details_id " +
                 "AND hotel_details.hotel_id=hotels.hotel_id " +
                 "AND countries.country_id=hotels.country_id " +
-                "AND status_order=2;";
+                "AND status_order=2 AND users.user_id='" + user_id + "'";
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
             do {

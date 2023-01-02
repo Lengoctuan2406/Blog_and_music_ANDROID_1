@@ -19,6 +19,8 @@ public class Policies extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Policies.this, DetailRoom.class);
+                //finish();
+                overridePendingTransition(R.anim._1_slide_center_to_right, R.anim._1_slide_left_to_center);
                 startActivity(i);
             }
         });

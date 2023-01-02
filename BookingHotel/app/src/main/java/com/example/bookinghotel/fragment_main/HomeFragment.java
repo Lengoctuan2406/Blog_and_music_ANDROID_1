@@ -232,7 +232,7 @@ public class HomeFragment extends Fragment {
                 ", picture_hotel, address_hotel, star_hotel" +
                 ", like_id, country_name " +
                 "FROM hotels, countries " +
-                "WHERE hotels.country_id=countries.country_id ORDER BY star_hotel;";
+                "WHERE hotels.country_id=countries.country_id ORDER BY star_hotel DESC LIMIT 5;";
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
             do {

@@ -44,6 +44,8 @@ public class Review extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Review.this, DetailRoom.class);
+                i.putExtra("hotel_id", hotel_id);
+                overridePendingTransition(R.anim._1_slide_center_to_right, R.anim._1_slide_left_to_center);
                 startActivity(i);
             }
         });
@@ -68,6 +70,8 @@ public class Review extends AppCompatActivity {
                                 , random_comment_id, "", "", content_comments));
                         Intent i = new Intent(Review.this, Review.class);
                         i.putExtra("hotel_id", hotel_id);
+                        finish();
+                        overridePendingTransition(0, 0);
                         startActivity(i);
 
                         Toast toast = Toast.makeText(getApplicationContext(), "Successful comment!", Toast.LENGTH_LONG);

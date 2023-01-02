@@ -51,7 +51,7 @@ public class SignUp extends AppCompatActivity {
                     String pass_work = _118.getText().toString();
                     db.addUsers(new _0_users(random, "", "", "", ""
                             , "", "", "", user_name
-                            , email, pass_work, "2001-01-01"
+                            , email, pass_work, ""
                             , "", "", R.drawable._avatar_empty
                             , "", "", ""));
                     Toast toast = Toast.makeText(getApplicationContext(), "Create account successfully", Toast.LENGTH_LONG);

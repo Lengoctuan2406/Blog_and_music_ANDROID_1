@@ -330,3 +330,7 @@ public static String reverseWordInMyString(String str)
 androidx.recyclerview.widget.RecyclerView
 
 @color/FFEAF4F9
+
+
+//finish();
+                    overridePendingTransition(0, 0);

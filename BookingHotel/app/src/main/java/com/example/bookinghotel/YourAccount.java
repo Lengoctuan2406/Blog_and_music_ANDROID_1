@@ -31,7 +31,7 @@ public class YourAccount extends AppCompatActivity {
     EditText _130, _128, _132, _137;
     TextView _125;
     RadioButton _134, _135;
-    Button _138;
+    Button _138, _139;
     Calendar calendar = Calendar.getInstance();
 
     public void findViewById() {
@@ -44,6 +44,7 @@ public class YourAccount extends AppCompatActivity {
         _134 = findViewById(R.id._134);
         _135 = findViewById(R.id._135);
         _138 = findViewById(R.id._138);
+        _139 = findViewById(R.id._139);
     }
 
     public void setOnClickListener() {
@@ -67,6 +68,16 @@ public class YourAccount extends AppCompatActivity {
                 new DatePickerDialog(YourAccount.this, date, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
+        _139.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(YourAccount.this, MainActivity.class);
+                i.putExtra("fragment", 4);
+                //finish();
+                overridePendingTransition(0, 0);
+                startActivity(i);
+            }
+        });
         _138.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,6 +96,8 @@ public class YourAccount extends AppCompatActivity {
 
                 Intent i = new Intent(YourAccount.this, MainActivity.class);
                 i.putExtra("fragment", 4);
+                //finish();
+                overridePendingTransition(0, 0);
                 startActivity(i);
 
                 Toast toast = Toast.makeText(getApplicationContext(), "Account update successful!", Toast.LENGTH_LONG);
@@ -98,6 +111,8 @@ public class YourAccount extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(YourAccount.this, MainActivity.class);
                 i.putExtra("fragment", 4);
+                //finish();
+                overridePendingTransition(R.anim._1_slide_center_to_right, R.anim._1_slide_left_to_center);
                 startActivity(i);
             }
         });
@@ -115,11 +130,9 @@ public class YourAccount extends AppCompatActivity {
             _132.setText(cursor.getString(2));
             _137.setText(cursor.getString(3));
             if(cursor.getString(4) == "Nam"){
-                _134.setChecked(true);
-                _135.setChecked(false);
-            } else {
-                _134.setChecked(false);
                 _135.setChecked(true);
+            } else {
+                _134.setChecked(true);
             }
         }
     }

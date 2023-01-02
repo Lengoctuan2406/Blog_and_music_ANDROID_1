@@ -72,6 +72,7 @@ public class BlogFragment extends Fragment {
                     Intent i = new Intent(getActivity(), MainActivity.class);
                     i.putExtra("search", _193.getText().toString());
                     i.putExtra("fragment", 3);
+
                     startActivity(i);
                     _193.setText("");
                 }

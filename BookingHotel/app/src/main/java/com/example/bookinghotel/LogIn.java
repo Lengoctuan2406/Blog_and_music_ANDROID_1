@@ -53,11 +53,11 @@ public class LogIn extends AppCompatActivity {
                     toast.show();
                     //chuyển màn hình
                     Intent i = new Intent(LogIn.this, MainActivity.class);
+                    finish();
                     startActivity(i);
-                    overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
                 } else {
                     Toast toast = Toast.makeText(getApplicationContext(), "Incorrect account or password!", Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.TOP | Gravity.LEFT, 0, 0);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 }
             }

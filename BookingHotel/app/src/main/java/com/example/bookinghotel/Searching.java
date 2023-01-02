@@ -64,6 +64,8 @@ public class Searching extends AppCompatActivity {
                     i.putExtra("date_from", date_from);
                     i.putExtra("date_to", date_to);
                     i.putExtra("search", _109.getText().toString());
+                    finish();
+                    overridePendingTransition(0, 0);
                     startActivity(i);
                     _109.setText("");
                 }

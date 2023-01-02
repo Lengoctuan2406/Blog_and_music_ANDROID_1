@@ -29,6 +29,8 @@ public class RoomHistory extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(RoomHistory.this, MainActivity.class);
                 i.putExtra("fragment", 4);
+                //finish();
+                overridePendingTransition(R.anim._1_slide_center_to_right, R.anim._1_slide_left_to_center);
                 startActivity(i);
             }
         });

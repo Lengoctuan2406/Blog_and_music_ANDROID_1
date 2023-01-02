@@ -53,6 +53,7 @@ public class DetailRoom extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(DetailRoom.this, Review.class);
                 i.putExtra("hotel_id", hotel_id);
+                overridePendingTransition(R.anim._2_slide_center_to_left, R.anim._2_slide_right_to_center);
                 startActivity(i);
             }
         });
