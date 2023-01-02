@@ -63,7 +63,8 @@ public class BlogDetail extends AppCompatActivity {
         String blog_id = intent.getStringExtra("blog_id");
         String selectQuery = "SELECT blog_id, picture_blog" +
                 ", title_blog, country_name, content_blog " +
-                "FROM blogs, countries WHERE blogs.country_id=countries.country_id";
+                "FROM blogs, countries WHERE blogs.country_id=countries.country_id " +
+                "AND blog_id='" + blog_id + "'";
         SQLiteDatabase db = new DatabaseHandler(this).getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()) {
