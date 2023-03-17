@@ -310,7 +310,7 @@ public class GetStarted extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
         findViewById();
-        others();
+        //others();
         setOnClickListener();
     }
 }
